@@ -12,19 +12,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <style>
+            .input {
+                color: red;
+            }
+
+        </style>
     </head>
 
     <body>
-        <form method="post" action="submit">
-            <label>First Name</label>
-            <input type="text" name="fName">
-            <label>Last Name</label>
-            <input type="text" name="lName">
-            <label>Password</label>
-            <input type="password" name="pW">
-            <label>Confirm Password</label>
-            <input type="password" name="cPW">
-            <input type="submit" value="Register">
+        <form method="post" action="submit" id="reg">
+            <label class="input">First Name</label>
+            <input type="text" name="First Name" class="input" id="fName">
+            <label class="input">Last Name</label>
+            <input type="text" name="Last Name" class="input" id="lName">
+            <label class="input"> Password</label>
+            <input type="password" name="pW" class="pw input">
+            <label class="input">Confirm Password</label>
+            <input type="password" name="cPW" class="pw input">
+            <input type="submit" value="Register" class="input submit">
 
         </form>
         <!--[if lt IE 7]>
