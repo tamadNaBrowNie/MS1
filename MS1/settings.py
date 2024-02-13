@@ -54,7 +54,7 @@ ROOT_URLCONF = 'MS1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['.\\MS1_web\\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
