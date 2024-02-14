@@ -8,26 +8,24 @@
 from django.db import models
 
 
-class Credentials(models.Model):
-    uid = models.PositiveIntegerField(primary_key=True)  # The composite primary key (uid, username) found, that is not supported. The first column is selected.
-    username = models.CharField(unique=True, max_length=16)
-    pw = models.CharField(max_length=255)
-
-    class Meta:
-        managed = False
-        db_table = 'credentials'
-        unique_together = (('uid', 'username'),)
-
-
 class User(models.Model):
     username = models.CharField(unique=True, max_length=16)
     email = models.CharField(max_length=255)
     legal_name = models.CharField(max_length=255)
     pfp = models.TextField(blank=True, null=True)
     joined = models.DateField()
-    uuid = models.AutoField(primary_key=True)  # The composite primary key (uuid, username, email, legal_name) found, that is not supported. The first column is selected.
+    phone = models.CharField(primary_key=True, max_length=11)  # The composite primary key (phone, username, email) found, that is not supported. The first column is selected.
 
     class Meta:
         managed = False
         db_table = 'user'
-        unique_together = (('uuid', 'username', 'email', 'legal_name'),)
+        unique_together = (('phone', 'username', 'email'),)
+
+
+class Credentials(models.Model):
+    username = models.OneToOneField(User, models.DO_NOTHING, db_column='username', primary_key=True)
+    pw = models.CharField(max_length=255)
+
+    class Meta:
+        managed = False
+        db_table = 'credentials'
