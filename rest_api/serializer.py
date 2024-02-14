@@ -1,7 +1,9 @@
-from rest_framework import serializers
+from rest_framework.serializers import Serializer
+from MS1_web.models import user
 from MS1_web import models
 
-class CredentialSerializer:
-    pass
-class UserSerializer:pass
-class FormSerializer:pass
+
+class UserSerializer(Serializer):
+    class Meta:
+        model = user
+        fields = '__all__'
