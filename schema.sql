@@ -35,7 +35,8 @@ CREATE TABLE user (
   `pfp` mediumblob,
   `joined` date NOT NULL,
   `phone` varchar(11) NOT NULL,
-  PRIMARY KEY (`phone`,`username`,`email`),
+   `pw` varchar(255) NOT NULL,
+  PRIMARY KEY (`phone`,`username`,`email`,`pw`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `phone_UNIQUE` (`phone`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
@@ -43,16 +44,7 @@ CREATE TABLE user (
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 DROP TABLE IF EXISTS credentials;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE credentials (
-  `username` varchar(16) NOT NULL,
-  `pw` varchar(255) NOT NULL,
-  PRIMARY KEY (`username`),
-  UNIQUE KEY `username_UNIQUE` (`username`),
-  KEY `username_idx` (`username`),
-  FOREIGN KEY (`username`) REFERENCES user(`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 

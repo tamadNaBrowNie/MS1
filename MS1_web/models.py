@@ -14,18 +14,10 @@ class User(models.Model):
     legal_name = models.CharField(max_length=255)
     pfp = models.TextField(blank=True, null=True)
     joined = models.DateField()
-    phone = models.CharField(primary_key=True, max_length=11)  # The composite primary key (phone, username, email) found, that is not supported. The first column is selected.
-
-    class Meta:
-        managed = False
-        db_table = 'user'
-        unique_together = (('phone', 'username', 'email'),)
-
-
-class Credentials(models.Model):
-    username = models.OneToOneField(User, models.DO_NOTHING, db_column='username', primary_key=True)
+    phone = models.CharField(primary_key=True, max_length=11)  # The composite primary key (phone, username, email, pw) found, that is not supported. The first column is selected.
     pw = models.CharField(max_length=255)
 
     class Meta:
         managed = False
-        db_table = 'credentials'
+        db_table = 'user'
+        unique_together = (('phone', 'username', 'email', 'pw'),)
