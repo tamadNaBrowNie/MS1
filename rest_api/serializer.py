@@ -3,7 +3,7 @@ from MS1_web.models import user
 
 
 
-class UserSerializer(serializers.Serializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = user
         fields = '__all__'

@@ -30,8 +30,9 @@ def LoginUser(request):
 @api_view(['POST'])
 def NewUser(request):
     # this is the query
-    serial = UserSerializer(data = request.data())
-    if serial.isvalid():
+    
+    serial = UserSerializer(data = request.data)
+    if serial.is_valid():
         serial.save()
         return Response(serial.data,status=200)
     return Response('bar',status=400)
