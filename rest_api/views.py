@@ -9,18 +9,19 @@ from django.contrib.auth.hashers import check_password
 def LoginUser(request):
     
     cred = """
-    SELECT pw FROM user WHERE user.username = %(name)s LIMIT 1; 
+    SELECT pw FROM user WHERE user.username = %(username)s LIMIT 1; 
                """
 
     
     bio =    """
-    SELECT username, email,legal_name, pfp, phone FROM user WHERE user.username = %(name)s ; 
+    SELECT username, email,legal_name, pfp, phone FROM user WHERE user.username = %(username)s ; 
                  """
-    dat = MyUser.objects.raw(cred,args)[0]
-    if not check_password(password = args['pw'],encoded = dat['pw']):
+    creds = request.query_params
+    dat = MyUser.objects.raw(cred,creds)[0]
+    if not check_password(password = creds['pw'],encoded = dat['pw']):
         return Response(status = 500)
-    args = request.query_params
-    dat = MyUser.objects.raw(bio,args)
+
+    dat = MyUser.objects.raw(bio,creds)
     return Response(dat,status = 200)
 @api_view(['POST'])
 def NewUser(request):

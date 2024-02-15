@@ -11,6 +11,6 @@ def reg(request):
 def login(request):
     return render(request, 'login.html')
 def land(req):
-    return HttpResponse('Welcome')
+    return render(req, 'land.html')
 # def hello(request):
 #     return HttpResponse('Hello')

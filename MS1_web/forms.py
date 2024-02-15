@@ -13,7 +13,7 @@ class UserForm(ModelForm):
     repeat_password =CharField(required=True, max_length=255, widget=PasswordInput)
     email = EmailField(required=True, max_length=255)
     legal_name = CharField(required=True, max_length=255)
-    pfp = ImageField()
+    pfp = ImageField(required=False, )
     phone = CharField(required=True, max_length=11) 
     
     class Meta:
