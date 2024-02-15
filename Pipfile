@@ -11,6 +11,7 @@ asgiref = "==3.7.2"
 pytz = "==2024.1"
 sqlparse = "==0.4.4"
 tzdata = "==2024.1"
+pillow = "*"
 
 [dev-packages]
 
