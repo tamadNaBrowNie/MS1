@@ -34,7 +34,6 @@ class UserForm(ModelForm):
         else: return pw
         
 class LoginForm(ModelForm):
-    username =CharField(required=True, max_length=16)
     pw =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',)
     class Meta:
         model = MyUser
