@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password
-from .models import MyUser
+from .models import user
 from .forms import UserForm,LoginForm
 # Create your views here.
 def reg(request):

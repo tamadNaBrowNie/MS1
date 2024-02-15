@@ -19,7 +19,7 @@ def LoginUser(request):
                  """
     creds = request.query_params
     uname = request.query_params['username']
-    dat = MyUser.objects.raw(cred,[uname])
+    dat = user.objects.raw(cred,[uname])
     print (dat)
     # if not check_password(password = creds['pw'],encoded = dat['pw']):pass
     #     return Response(status = 500)
