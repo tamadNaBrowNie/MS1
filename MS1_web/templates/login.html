@@ -16,8 +16,8 @@
 
     <body>
         <form method="get" action="submit" id="login">
-            <input type="text" name="uName">
-            <input type="password">
+            {% csrf_token %}
+            {{form}}
             <button type="submit">Login</button>
         </form>
         <!--[if lt IE 7]>

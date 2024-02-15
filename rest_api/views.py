@@ -9,20 +9,23 @@ from django.contrib.auth.hashers import check_password
 def LoginUser(request):
     
     cred = """
-    SELECT pw FROM user WHERE user.username = %(username)s LIMIT 1; 
+    SELECT pw, username FROM user WHERE username = %s; 
                """
 
     
     bio =    """
-    SELECT username, email,legal_name, pfp, phone FROM user WHERE user.username = %(username)s ; 
+    SELECT username, email,legal_name, pfp, phone FROM user WHERE user.username = %(name)s ; 
                  """
     creds = request.query_params
-    dat = MyUser.objects.raw(cred,creds)[0]
-    if not check_password(password = creds['pw'],encoded = dat['pw']):
-        return Response(status = 500)
+    uname = request.query_params['username']
+    dat = MyUser.objects.raw(cred,[uname])
+    print (dat)
+    # if not check_password(password = creds['pw'],encoded = dat['pw']):pass
+    #     return Response(status = 500)
 
-    dat = MyUser.objects.raw(bio,creds)
-    return Response(dat,status = 200)
+    # dat = MyUser.objects.raw(bio,creds)
+
+    return Response(status = 200)
 @api_view(['POST'])
 def NewUser(request):
     # this is the query
