@@ -1,6 +1,7 @@
 from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,ValidationError
 from .models import MyUser
 from django.core.validators import RegexValidator
+# ^(09|)\d{9}$
 class UserForm(ModelForm):
     username =CharField(required=True, max_length=16)
     pw =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',validators=[
@@ -14,7 +15,13 @@ class UserForm(ModelForm):
     email = EmailField(required=True, max_length=255)
     legal_name = CharField(required=True, max_length=255)
     pfp = ImageField(required=False, )
-    phone = CharField(required=True, max_length=11) 
+    phone = CharField(required=True, max_length=11,validators=[
+            RegexValidator(
+                regex=r'^(09|)\d{9}$',
+                message="Invalid Number ",
+                code="invalid password",
+            ),
+        ],) 
     
     class Meta:
         model = MyUser

@@ -8,7 +8,7 @@
 from django.db import models
 
 class MyUser(models.Model):
-    username = models.CharField(unique=True, max_length=16)
+    username = models.CharField(unique=True, max_length=255)
     email = models.EmailField(max_length=255)
     legal_name = models.CharField(max_length=255)
     pfp = models.BinaryField(blank=True, null=True, )
