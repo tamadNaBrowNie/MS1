@@ -13,7 +13,6 @@ class User(models.Model):
     email = models.CharField(max_length=255)
     legal_name = models.CharField(max_length=255)
     pfp = models.TextField(blank=True, null=True)
-    joined = models.DateField()
     phone = models.CharField(primary_key=True, max_length=11)  # The composite primary key (phone, username, email, pw) found, that is not supported. The first column is selected.
     pw = models.CharField(max_length=255)
 
