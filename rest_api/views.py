@@ -34,8 +34,10 @@ def LoginUser(request):
 def NewUser(request):
     # this is the query
     data = request.data
-    data['pw'] = make_password(data['pw'])
-    serial = UserSerializer(data)
+    # data['pw'] = make_password(data['pw'])
+    dic = data.copy()
+    dic['pw'] = make_password(dic['pw'])
+    serial = UserSerializer(data= dic)
     if serial.is_valid():
         serial.save()
         return Response(serial.data,status=200)
