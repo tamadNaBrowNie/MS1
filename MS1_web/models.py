@@ -7,7 +7,7 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 from django.contrib.auth.hashers import make_password
-class User(models.Model):
+class MyUser(models.Model):
     username = models.CharField(unique=True, max_length=16)
     email = models.EmailField(max_length=255)
     legal_name = models.CharField(max_length=255)
