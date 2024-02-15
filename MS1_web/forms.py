@@ -1,5 +1,5 @@
 from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,ValidationError
-from .models import MyUser
+from .models import user
 from django.core.validators import RegexValidator
 # ^(09|)\d{9}$
 class UserForm(ModelForm):
@@ -24,7 +24,7 @@ class UserForm(ModelForm):
         ],) 
     
     class Meta:
-        model = MyUser
+        model = user
         fields = '__all__'
     def clean_passwords(self,*args,**kwargs):
         pw = self.cleaned_data['pw']
@@ -34,8 +34,7 @@ class UserForm(ModelForm):
         else: return pw
         
 class LoginForm(ModelForm):
-    username =CharField(required=True, max_length=16)
     pw =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',)
     class Meta:
-        model = MyUser
+        model = user
         fields = ['username','pw']
