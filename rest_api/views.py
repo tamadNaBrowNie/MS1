@@ -22,5 +22,8 @@ def LoginUser(request):
     args = request.query_params
     dat = MyUser.objects.raw(bio,args)
     return Response(dat,status = 200)
+@api_view(['POST'])
 def NewUser(request):
+    # this is the query
     add= """INSERT INTO user (username, email,legal_name,pfp,phone,pw) VALUES(%(uName)s,%(email)s,%(name)s,%(pfp)s,%(num)s,%(pw)s)"""
+    return Response('foo',status=200)

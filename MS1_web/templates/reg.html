@@ -1,6 +1,7 @@
 
 
 <form method="post" action="submit" id="reg">
+{% csrf_token %}
 {{form}}
 <input type="submit" value="Register" class="input submit">
 
