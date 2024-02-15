@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from MS1_web.models import MyUser
+from MS1_web.models import user
 from django.contrib.auth.hashers import check_password
+from .serializer import UserSerializer
 # Create your views here.
-
+from rest_framework.parsers import JSONParser 
 @api_view(['GET'])
 def LoginUser(request):
     
@@ -29,5 +30,8 @@ def LoginUser(request):
 @api_view(['POST'])
 def NewUser(request):
     # this is the query
-    add= """INSERT INTO user (username, email,legal_name,pfp,phone,pw) VALUES(%(uName)s,%(email)s,%(name)s,%(pfp)s,%(num)s,%(pw)s)"""
-    return Response('foo',status=200)
+    serial = UserSerializer(data = request.data())
+    if serial.isvalid():
+        serial.save()
+        return Response(serial.data,status=200)
+    return Response('bar',status=400)
