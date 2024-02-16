@@ -9,11 +9,11 @@ from django.db import models
 
 
 class user(models.Model):
-    username = models.CharField(unique=True, max_length=255)
+    username = models.CharField(primary_key=True,unique=True, max_length=255)
     email = models.EmailField(max_length=255)
     legal_name = models.CharField(max_length=255)
     pfp = models.BinaryField(blank=True, null=True, )
-    phone = models.CharField(primary_key=True, max_length=11,
+    phone = models.CharField(primary_key=False, max_length=11,
             )  # The composite primary key (phone, username, email, pw) found, that is not supported. The first column is selected.
     pw = models.CharField(max_length=255,)
     # Pattern Modified from https://ihateregex.io/expr/password/

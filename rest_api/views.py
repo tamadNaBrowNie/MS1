@@ -14,11 +14,11 @@ def LoginUser(request):
     
     creds = request.query_params
     uname = creds['username']
-    
+    pw = creds['pw']
     # pw = user.pw.filter(username=uname)
     if uname == 'admin' and pw == 'I identify as 1/300 C because i am a km/s':
         return Response('welcome admin', status =200)
-    dat = user.objects.filter(username=uname)
+    dat = user.objects.raw(""" SELECT username,pw FROM user WHERE username = %s""",(uname,))
     pw = dat[0].pw
     # print (dat)
     if not check_password(password = creds['pw'],encoded = pw):
@@ -30,16 +30,16 @@ def LoginUser(request):
 @api_view(['POST'])
 def NewUser(request):
     # this is the query
-    data = request.data
     # data['pw'] = make_password(data['pw'])
     # dic = data.copy()
     # dic['pw'] = make_password(dic['pw'])
-    # serial = UserSerializer(data= dic)
-    serial =  UserForm(data=data)
-    if serial.is_valid():
-        post = serial.save(commit=False)
-        post.pw =make_password(data['pw'])
+    serial = UserSerializer(data=request.data)
+    # serial =  UserForm(data=data)
+    try:
+        serial.is_valid(raise_exception=True)
+        post = serial.save()
+        post.pw =make_password(request.data['pw'])
         post.save()
-        
-        return Response(serial.data,status=200)
-    return Response('bar',status=400)
+        return Response(status=200)
+    except Exception as e:
+        return Response(str(e),status=400)
