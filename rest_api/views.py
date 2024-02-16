@@ -9,26 +9,19 @@ from MS1_web.forms import UserForm
 from rest_framework.parsers import JSONParser 
 @api_view(['GET'])
 def LoginUser(request):
+    # TODO: cahce uname. declare wtf after 5 attempts. if it appears again, reject.
     
-    cred = """
-    SELECT pw, username FROM user WHERE username = %s; 
-               """
-
-    
-    bio =    """
-    SELECT username, email,legal_name, pfp, phone FROM user WHERE user.username = %(name)s ; 
-                 """
     
     creds = request.query_params
-    uname = request.query_params['username']
-    pw = request.query_params['pw']
+    uname = creds['username']
+    
     # pw = user.pw.filter(username=uname)
     if uname == 'admin' and pw == 'I identify as 1/300 C because i am a km/s':
         return Response('welcome admin', status =200)
     dat = user.objects.filter(username=uname)
     pw = dat[0].pw
     # print (dat)
-    if not check_password(password = request.query_params['pw'],encoded = pw):
+    if not check_password(password = creds['pw'],encoded = pw):
         return Response(status = 500)
 
     # dat = MyUser.objects.raw(bio,creds)
@@ -39,11 +32,14 @@ def NewUser(request):
     # this is the query
     data = request.data
     # data['pw'] = make_password(data['pw'])
-    dic = data.copy()
-    dic['pw'] = make_password(dic['pw'])
+    # dic = data.copy()
+    # dic['pw'] = make_password(dic['pw'])
     # serial = UserSerializer(data= dic)
-    serial =  UserForm(data=dic)
+    serial =  UserForm(data=data)
     if serial.is_valid():
-        serial.save()
+        post = serial.save(commit=False)
+        post.pw =make_password(data['pw'])
+        post.save()
+        
         return Response(serial.data,status=200)
     return Response('bar',status=400)
