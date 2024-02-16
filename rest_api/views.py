@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from MS1_web.models import user
 from django.contrib.auth.hashers import check_password,make_password
 from .serializer import UserSerializer
+from MS1_web.forms import UserForm
 # Create your views here.
 from rest_framework.parsers import JSONParser 
 @api_view(['GET'])
@@ -40,7 +41,8 @@ def NewUser(request):
     # data['pw'] = make_password(data['pw'])
     dic = data.copy()
     dic['pw'] = make_password(dic['pw'])
-    serial = UserSerializer(data= dic)
+    # serial = UserSerializer(data= dic)
+    serial =  UserForm(data=dic)
     if serial.is_valid():
         serial.save()
         return Response(serial.data,status=200)
