@@ -7,7 +7,7 @@ from .serializer import UserSerializer
 from MS1_web.forms import UserForm
 # Create your views here.
 from rest_framework.parsers import JSONParser 
-@api_view(['GET'])
+@api_view(['POST'])
 def LoginUser(request):
     # TODO: cahce uname. declare wtf after 5 attempts. if it appears again, reject.
     
@@ -22,7 +22,7 @@ def LoginUser(request):
     pw = dat[0].pw
     # print (dat)
     if not check_password(password = creds['pw'],encoded = pw):
-        return Response(status = 500)
+        return Response(', '.join((creds['pw'],pw)),status = 500)
 
     # dat = MyUser.objects.raw(bio,creds)
 
@@ -32,14 +32,17 @@ def NewUser(request):
     # this is the query
     data = request.data
     # data['pw'] = make_password(data['pw'])
-    # dic = data.copy()
-    # dic['pw'] = make_password(dic['pw'])
-    # serial = UserSerializer(data= dic)
-    serial =  UserForm(data=data)
+    dic = data.copy()
+    dic['pw'] = make_password(dic['pw'])
+    # serial = UserSerializer(data= data)
+    serial =  UserForm(data=dic)
     if serial.is_valid():
-        post = serial.save(commit=False)
-        post.pw =make_password(data['pw'])
-        post.save()
+        # post = serial.validated_data
         
-        return Response(serial.data,status=200)
-    return Response('bar',status=400)
+        # serial.pw =make_password(post['pw'])
+
+        dat = serial.save()
+        
+        return Response(dat.pw,status=200)
+    
+    return Response(serial.errors,status=400)

@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <form method="get" action="submit" id="login">
+        <form method="post" action="submit" id="login">
             {% csrf_token %}
             {{form}}
             <button type="submit">Login</button>

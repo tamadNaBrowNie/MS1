@@ -6,12 +6,12 @@ name = "pypi"
 [packages]
 django = "==5.0.2"
 mysqlclient = "==2.2.4"
-djangorestframework = "*"
+djangorestframework = "==3.14.0"
 asgiref = "==3.7.2"
 pytz = "==2024.1"
 sqlparse = "==0.4.4"
 tzdata = "==2024.1"
-pillow = "*"
+pillow = "==10.2.0"
 
 [dev-packages]
 

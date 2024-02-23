@@ -20,12 +20,12 @@ class UserSerializer(serializers.ModelSerializer):
     def validate_pw(self,value):
         regex = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$')
         if not regex.match(value):
-            raise serializers.ValidationError("Password is 16-255 characters long with atleast one upper case English letter, one lower case English letter, one special character ")
+            raise serializers.ValidationError("Password length 16-255 characters. has upper case and lower English letter, special character ")
         return value
     def validate_phone(self,value):
         regex = re.compile(r'^(09|)\d{9}$')
         if not regex.match(value):
-            raise serializers.ValidationError("Password is 16-255 characters long with atleast one upper case English letter, one lower case English letter, one special character ")
+            raise serializers.ValidationError("invalid number")
         return value
     class Meta:
         model = user
