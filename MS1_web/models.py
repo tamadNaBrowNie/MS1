@@ -13,6 +13,7 @@ class user(models.Model):
     email = models.EmailField(max_length=255)
     legal_name = models.CharField(max_length=255)
     pfp = models.BinaryField(blank=True, null=True, )
+
     phone = models.CharField(max_length=11,)  # The composite primary key (phone, username, email, pw) found, that is not supported. The first column is selected.
     pw = models.CharField(max_length=255,)
     # Pattern Modified from https://ihateregex.io/expr/password/

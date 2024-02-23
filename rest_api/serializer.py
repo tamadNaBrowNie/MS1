@@ -1,31 +1,31 @@
 from rest_framework import serializers
 from MS1_web.models import user
-from django.core.validators import RegexValidator
+
 import re
-pw_v=[
-            RegexValidator(
-                regex=r'^(09|)\d{9}$',
-                message="Invalid Number ",
-                code="invalid password",
-            ),
-        ]
-ph_v =[
-            RegexValidator(
-                regex=r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$',
-                message="Password is 16-255 characters long with atleast one upper case English letter, one lower case English letter, one special character ",
-                code="invalid password",
-            ),
-        ]
+# pw_v=[
+#             RegexValidator(
+#                 regex=r'^(09|)\d{9}$',
+#                 message="Invalid Number ",
+#                 code="invalid password",
+#             ),
+#         ]
+# ph_v =[
+#             RegexValidator(
+#                 regex=r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$',
+#                 message="Password is 16-255 characters long with atleast one upper case English letter, one lower case English letter, one special character ",
+#                 code="invalid password",
+#             ),
+#         ]
 class UserSerializer(serializers.ModelSerializer):
     def validate_pw(self,value):
         regex = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$')
         if not regex.match(value):
-            raise serializers.ValidationError("Password length 16-255 characters. has upper case and lower English letter, special character ")
+            raise serializers.ValidationError("Password length is 16-255. Has upper case and lower case English letter, special character, and numbers. ")
         return value
     def validate_phone(self,value):
         regex = re.compile(r'^(09|)\d{9}$')
         if not regex.match(value):
-            raise serializers.ValidationError("invalid number")
+            raise serializers.ValidationError("Invalid Philippine Cellphone")
         return value
     class Meta:
         model = user
