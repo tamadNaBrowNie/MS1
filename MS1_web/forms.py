@@ -1,5 +1,5 @@
-from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,ValidationError
-from .models import user
+from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,ValidationError,FileField
+from .models import user,entry
 # ^(09|)\d{9}$
 class UserForm(ModelForm):
     username =CharField(required=True, max_length=16)
@@ -26,3 +26,11 @@ class LoginForm(ModelForm):
     class Meta:
         model = user
         fields = ['username','pw']
+        
+class Archive(ModelForm):
+    title = CharField(required=True, max_length=255)
+    thumb = ImageField(required=False, )
+    doc = FileField(required=False,)
+    class Meta:
+        model = entry
+        fields = '__all__'

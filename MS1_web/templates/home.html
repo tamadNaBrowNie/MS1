@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <!--  link rel="stylesheet" href=""  -->
+        <title>Home</title>
+    </head>
+    <body>
+        {% for post in posts %}
+            <img style={{post.id}}>
+            <p>{{post.txt}}</p>
+            <input value="Nyet" placeholder="Notes" style="position:absolute;left:421px;top:152px;">
+        {%endfor%}
+    </body>
+</html>

@@ -38,17 +38,24 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework','MS1_web'
+    'MS1_web',
+    'axes',"django_extensions",
+    'rest_framework',
 ]
-
+AUTHENTICATION_BACKENDS = [
+   'axes.backends.AxesBackend',
+   'django.contrib.auth.backends.ModelBackend',
+]
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+     'axes.middleware.AxesMiddleware',
+     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django_session_timeout.middleware.SessionTimeoutMiddleware',
 ]
 
 ROOT_URLCONF = 'MS1.urls'
@@ -68,10 +75,18 @@ TEMPLATES = [
         },
     },
 ]
-
+AXES_FAILURE_LIMIT: 6
+AXES_COOLOFF_TIME: 1
+AXES_RESET_ON_SUCCESS = True
+AXES_RESET_COOL_OFF_ON_FAILURE_DURING_LOCKOUT = True
 WSGI_APPLICATION = 'MS1.wsgi.application'
-
-
+SESSION_COOKIE_AGE = 10
+SESSION_SECURITY_EXPIRE_AFTER = 10
+SESSION_SECURITY_WARN_AFTER = 5
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+# SESSION_EXPIRE_SECONDS = 10
+# SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+# SESSION_TIMEOUT_REDIRECT = ''
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -103,7 +118,27 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+LOGGING = {
+    'version': 1,
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        }
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+        }
+    },
+    'loggers': {
+        'django.db.backends': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+        }
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -115,7 +150,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
+LOGIN_URL = '/login/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

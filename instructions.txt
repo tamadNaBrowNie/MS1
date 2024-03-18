@@ -1,7 +1,2 @@
-Sir, run schema.sql in DB folder in a MySQL connection. Creates a schema called ms1. Please start a virtual 
-environment then go to the directory of project. Please install the requirements from requirements.txt. Enter 
-MS1 subdirectory. Edit settings.py. Set 'HOST' to the host of the connection and 'PORT' to its port. The 'USER' 
-should be a user that can has sufficient crud access to the db ms1. 'PASSWORD' is the password of that user. DO 
-NOT CHANGE THE 'NAME' or 'ENGINE'. The server is runnable using manage.py. Try `python manage.py runserver`. If 
-it fails, try installing pipenv first then run pipenv in the project directory with `pipenv shell`. Install the 
-stuff in requirements.txt with pipenv. Finally runserver with the manage.py again.
+Sir, run schema.sql in DB folder in a MySQL connection. Creates a schema called ms1. Please start a virtual environment then go to the directory of project. Please install requirements using requirements.txt. Enter MS1 subdirectory. Edit settings.py. Set 'HOST' to host of connection and 'PORT' to its port. 'USER' is user with sufficient crud access to the db ms1. 'PASSWORD' is password of 'USER'. DO NOT CHANGE THE 'NAME' or 'ENGINE'. create certifacte and its key. Start server with  `python manage.py runserver_plus --cert-file <your certificate> --key-file <certificate key file>`. If it fails, try installing pipenv first then run pipenv in the project directory with `pipenv shell`. Install the stuff in requirements.txt with pipenv. Finally runserver with the 
+manage.py again.

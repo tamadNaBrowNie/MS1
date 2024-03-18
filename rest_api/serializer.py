@@ -35,5 +35,5 @@ class ProfileSerializer(serializers.Serializer):
     email = serializers.CharField(max_length=255)
     legal_name = serializers.CharField(max_length=255)
     pfp = serializers.ImageField()
-    phone = serializers.CharField( max_length=11)  # The composite primary key (phone, username, email, pw) found, that is not supported. The first column is selected.
+    phone = serializers.CharField( max_length=11)
     pw = serializers.CharField(max_length=255)
