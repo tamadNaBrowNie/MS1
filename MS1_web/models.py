@@ -8,23 +8,28 @@
 from django.db import models
 
 class entry(models.Model):
-    thumb = models.FileField(blank=True, null=True, )
-    doc = models.FileField(blank=True, null=True, )
+    ind =  models.AutoField(primary_key=True)
+    owner = models.ForeignKey(to='user', on_delete=models.RESTRICT)
+    thumb = models.ImageField(blank=True, null=True,
+                                upload_to=
+                            lambda instance, filename: f"{instance.title}/img/{filename}")
+    doc = models.FileField(blank=True, null=True,   upload_to=
+                            lambda instance, filename: f"{instance.title}/doc/{filename}")
     title = models.CharField(max_length=255,null = False)
     class Meta:
         managed = False
-        db_table = 'user'
+        db_table = 'posts'
 
 
 class user(models.Model):
     username = models.CharField(primary_key=True,unique=True, max_length=255)
     email = models.EmailField(max_length=255)
     legal_name = models.CharField(max_length=255)
-    pfp = models.FileField(blank=True, null=True, )
-
-    phone = models.CharField(max_length=11,)  # The composite primary key (phone, username, email, pw) found, that is not supported. The first column is selected.
+    pfp = models.ImageField(blank=True, null=True,
+                            upload_to=
+                            lambda instance, filename: f"{instance.username}/pfp/{filename}")
+    phone = models.CharField(max_length=11,) 
     pw = models.CharField(max_length=255,)
-    # Pattern Modified from https://ihateregex.io/expr/password/
     
 
     class Meta:

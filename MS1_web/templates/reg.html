@@ -1,6 +1,6 @@
 
 
-<form method="post" action="submit" id="reg">
+<form method="post" action="submit" id="reg" enctype="multipart/form-data">
 {% csrf_token %}
 {{form}}
 <input type="submit" value="Register" class="input submit">

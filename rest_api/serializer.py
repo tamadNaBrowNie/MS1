@@ -18,7 +18,14 @@ import re
 #         ]
 class UserSerializer(serializers.ModelSerializer):
     def validate_pw(self,value):
-        regex = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$')
+        username = serializers.CharField( max_length=255)
+        email = serializers.CharField(max_length=255)
+        legal_name = serializers.CharField(max_length=255)
+        pfp = serializers.ImageField()
+        phone = serializers.CharField( max_length=11)
+        pw = serializers.CharField(max_length=255)
+        regex = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$')    # Pattern Modified from https://ihateregex.io/expr/password/
+
         if not regex.match(value):
             raise serializers.ValidationError("Password length is 16-255. Has upper case and lower case English letter, special character, and numbers. ")
         return value
@@ -31,9 +38,4 @@ class UserSerializer(serializers.ModelSerializer):
         model = user
         fields = '__all__'
 class ProfileSerializer(serializers.Serializer):
-    username = serializers.CharField( max_length=255)
-    email = serializers.CharField(max_length=255)
-    legal_name = serializers.CharField(max_length=255)
-    pfp = serializers.ImageField()
-    phone = serializers.CharField( max_length=11)
-    pw = serializers.CharField(max_length=255)
+    pass

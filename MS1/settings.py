@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'MS1_web',
     'axes',"django_extensions",
-    'rest_framework',
+    'rest_framework','rest_api'
 ]
 AUTHENTICATION_BACKENDS = [
    'axes.backends.AxesBackend',
@@ -75,6 +75,9 @@ TEMPLATES = [
         },
     },
 ]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 AXES_FAILURE_LIMIT: 6
 AXES_COOLOFF_TIME: 1
 AXES_RESET_ON_SUCCESS = True
@@ -83,10 +86,10 @@ WSGI_APPLICATION = 'MS1.wsgi.application'
 SESSION_COOKIE_AGE = 10
 SESSION_SECURITY_EXPIRE_AFTER = 10
 SESSION_SECURITY_WARN_AFTER = 5
-# SESSION_EXPIRE_AT_BROWSER_CLOSE = False
-# SESSION_EXPIRE_SECONDS = 10
-# SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
-# SESSION_TIMEOUT_REDIRECT = ''
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_EXPIRE_SECONDS = 10
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+SESSION_TIMEOUT_REDIRECT = 'login'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
