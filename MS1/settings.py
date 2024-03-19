@@ -57,7 +57,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # 'django_session_timeout.middleware.SessionTimeoutMiddleware',
 ]
-
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': [
+#         'rest_framework.renderers.TemplateHTMLRenderer',
+#         'rest_framework.renderers.BrowsableAPIRenderer',
+#     ]
+# }
 ROOT_URLCONF = 'MS1.urls'
 
 TEMPLATES = [

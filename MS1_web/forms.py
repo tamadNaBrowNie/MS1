@@ -20,7 +20,10 @@ class UserForm(ModelForm):
     #     if pw != repeat_password:
     #         raise ValidationError('Password mismatch')
     #     else: return pw
-        
+class SearchForm(ModelForm):
+    class Meta:
+        model = user
+        fields = ['username']
 class LoginForm(ModelForm):
     pw =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',)
     class Meta:

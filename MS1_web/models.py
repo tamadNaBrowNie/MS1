@@ -6,28 +6,26 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
-
+def thumb(instance, filename):return f"{instance.title}/img/{filename}"
+def doc(instance, filename):return f"{instance.title}/doc/{filename}"
 class entry(models.Model):
     ind =  models.AutoField(primary_key=True)
     owner = models.ForeignKey(to='user', on_delete=models.RESTRICT)
-    thumb = models.ImageField(blank=True, null=True,
-                                upload_to=
-                            lambda instance, filename: f"{instance.title}/img/{filename}")
-    doc = models.FileField(blank=True, null=True,   upload_to=
-                            lambda instance, filename: f"{instance.title}/doc/{filename}")
+    thumb = models.ImageField(blank=True, null=True, upload_to=thumb)
+    doc = models.FileField(blank=True, null=True,   upload_to=doc )
     title = models.CharField(max_length=255,null = False)
     class Meta:
         managed = False
         db_table = 'posts'
 
-
+def pfp(instance, filename): return f"{instance.username}/pfp/{filename}"
 class user(models.Model):
     username = models.CharField(primary_key=True,unique=True, max_length=255)
     email = models.EmailField(max_length=255)
     legal_name = models.CharField(max_length=255)
     pfp = models.ImageField(blank=True, null=True,
-                            upload_to=
-                            lambda instance, filename: f"{instance.username}/pfp/{filename}")
+                            upload_to= pfp
+                           )
     phone = models.CharField(max_length=11,) 
     pw = models.CharField(max_length=255,)
     

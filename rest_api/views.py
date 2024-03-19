@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view,renderer_classes
 from rest_framework.response import Response
 from MS1_web.models import user
 from django.contrib.auth.hashers import check_password,make_password
 from .serializer import UserSerializer
 from MS1_web.forms import UserForm
+from rest_framework.renderers import TemplateHTMLRenderer
 # Create your views here.
 from rest_framework.parsers import JSONParser 
 @api_view(['POST'])
@@ -40,6 +41,23 @@ def NewUser(request):
         post = serial.save()
         post.pw =make_password(request.data['pw'])
         post.save()
-        return Response(status=200)
+        return Response(status=302, )
     except Exception as e:
         return Response(str(e),status=400)
+@api_view(['GET'])
+@renderer_classes([TemplateHTMLRenderer])
+def SeeUser(request):
+    param = request.query_params
+    rec = user.objects.get( pk=param['username'])
+    serial = UserSerializer(rec)
+
+    # serial = UserSerializer()
+    # serial.is_valid(raise_exception=True)
+    data = {
+        'name':serial.data['username'],
+        'img':serial.data['pfp'],
+        'phone':serial.data['phone'],
+        'email':serial.data['email']
+        }
+    # name = serial.serialize()
+    return Response(data,status=200,template_name = 'user.html')

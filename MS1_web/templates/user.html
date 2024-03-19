@@ -8,13 +8,10 @@
         <title>Home</title>
     </head>
     <body>
-        {% csrf_token %}
-        {{form}}
-        <button type="submit">Search</button>
-        {% for post in posts %}
-            <img style={{post.id}}>
-            <p>{{post.txt}}</p>
-            <input value="Nyet" placeholder="Notes" style="position:absolute;left:421px;top:152px;">
-        {%endfor%}
+            {{img}}
+            <img src="{{img}}">
+            {{name}}
+            {{phone}}
+            {{email}}
     </body>
 </html>

@@ -21,4 +21,5 @@ from .views import *
 urlpatterns = [
    path('register/submit',NewUser),
    path('login/submit',LoginUser),
+   path('user/',SeeUser)
 ]
