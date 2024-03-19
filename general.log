@@ -1,0 +1,1375 @@
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+CREATE TABLE `authtoken_token` (`key` varchar(40) NOT NULL PRIMARY KEY, `created` datetime(6) NOT NULL, `user_id` integer NOT NULL UNIQUE); (params None)
+(0.031) CREATE TABLE `authtoken_token` (`key` varchar(40) NOT NULL PRIMARY KEY, `created` datetime(6) NOT NULL, `user_id` integer NOT NULL UNIQUE); args=None; alias=default
+ALTER TABLE `authtoken_token` ADD CONSTRAINT `authtoken_token_user_id_35299eff_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); (params ())
+(0.047) ALTER TABLE `authtoken_token` ADD CONSTRAINT `authtoken_token_user_id_35299eff_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); args=(); alias=default
+(0.016) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('authtoken', '0001_initial', '2024-03-19 14:13:29.457333'); args=['authtoken', '0001_initial', '2024-03-19 14:13:29.457333']; alias=default
+(0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('authtoken', '0002_auto_20160226_1747', '2024-03-19 14:13:29.481022'); args=['authtoken', '0002_auto_20160226_1747', '2024-03-19 14:13:29.481022']; alias=default
+(0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('authtoken', '0003_tokenproxy', '2024-03-19 14:13:29.485108'); args=['authtoken', '0003_tokenproxy', '2024-03-19 14:13:29.485108']; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,); alias=default
+(0.016) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'MS1_web'; args=('MS1_web',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'MS1_web' AND `django_content_type`.`model` = 'entry') LIMIT 21; args=('MS1_web', 'entry'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'MS1_web' AND `django_content_type`.`model` = 'user') LIMIT 21; args=('MS1_web', 'user'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (10, 11) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(10, 11); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'MS1_web'; args=('MS1_web',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'axes'; args=('axes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accessattempt') LIMIT 21; args=('axes', 'accessattempt'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accesslog') LIMIT 21; args=('axes', 'accesslog'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accessfailurelog') LIMIT 21; args=('axes', 'accessfailurelog'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 9, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 9, 7); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'axes'; args=('axes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'authtoken'; args=('authtoken',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('authtoken', 'token'), ('authtoken', 'tokenproxy'); args=('authtoken', 'token', 'authtoken', 'tokenproxy'); alias=default
+(0.015) COMMIT; args=None; alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'authtoken' AND `django_content_type`.`model` = 'token') LIMIT 21; args=('authtoken', 'token'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'authtoken' AND `django_content_type`.`model` = 'tokenproxy') LIMIT 21; args=('authtoken', 'tokenproxy'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (12, 13) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(12, 13); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add Token', 12, 'add_token'), ('Can change Token', 12, 'change_token'), ('Can delete Token', 12, 'delete_token'), ('Can view Token', 12, 'view_token'), ('Can add token', 13, 'add_tokenproxy'), ('Can change token', 13, 'change_tokenproxy'), ('Can delete token', 13, 'delete_tokenproxy'), ('Can view token', 13, 'view_tokenproxy'); args=('Can add Token', 12, 'add_token', 'Can change Token', 12, 'change_token', 'Can delete Token', 12, 'delete_token', 'Can view Token', 12, 'view_token', 'Can add token', 13, 'add_tokenproxy', 'Can change token', 13, 'change_tokenproxy', 'Can delete token', 13, 'delete_tokenproxy', 'Can view token', 13, 'view_tokenproxy'); alias=default
+(0.000) COMMIT; args=None; alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'authtoken'; args=('authtoken',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.016) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'MS1_web'; args=('MS1_web',); alias=default
+(0.016) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'MS1_web' AND `django_content_type`.`model` = 'entry') LIMIT 21; args=('MS1_web', 'entry'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'MS1_web' AND `django_content_type`.`model` = 'user') LIMIT 21; args=('MS1_web', 'user'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (10, 11) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(10, 11); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'MS1_web'; args=('MS1_web',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'axes'; args=('axes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accessattempt') LIMIT 21; args=('axes', 'accessattempt'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accesslog') LIMIT 21; args=('axes', 'accesslog'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accessfailurelog') LIMIT 21; args=('axes', 'accessfailurelog'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 9, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 9, 7); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'axes'; args=('axes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'authtoken'; args=('authtoken',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'authtoken' AND `django_content_type`.`model` = 'token') LIMIT 21; args=('authtoken', 'token'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'authtoken' AND `django_content_type`.`model` = 'tokenproxy') LIMIT 21; args=('authtoken', 'tokenproxy'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (12, 13) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(12, 13); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'authtoken'; args=('authtoken',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.016) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) None; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.016) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) None; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) None; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) None; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) None; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 1; args=(1, 'asdf'); alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE (`user`.`email` = 'asdf@gmail.com' AND `user`.`phone` = '09111111113' AND `user`.`username` = 'asdf') LIMIT 1; args=(1, 'asdf@gmail.com', '09111111113', 'asdf'); alias=default
+(0.000) INSERT INTO `user` (`username`, `email`, `legal_name`, `pfp`, `phone`, `password`) VALUES ('asdf', 'asdf@gmail.com', 'asdf', 'asdf/pfp/Innova_NDP_5262_CR.jpg', '09111111113', 'asdfASDF@12341234'); args=('asdf', 'asdf@gmail.com', 'asdf', 'asdf/pfp/Innova_NDP_5262_CR.jpg', '09111111113', 'asdfASDF@12341234'); alias=default
+(0.000) UPDATE `user` SET `email` = 'asdf@gmail.com', `legal_name` = 'asdf', `pfp` = 'asdf/pfp/Innova_NDP_5262_CR.jpg', `phone` = '09111111113', `password` = 'pbkdf2_sha256$720000$hdHU265nahPFOWWGNrUZXF$9y0COkQvxBW4aB8IMk6LDiLJO9nwQs4gedRpTssP4Zo=' WHERE `user`.`username` = 'asdf'; args=('asdf@gmail.com', 'asdf', 'asdf/pfp/Innova_NDP_5262_CR.jpg', '09111111113', 'pbkdf2_sha256$720000$hdHU265nahPFOWWGNrUZXF$9y0COkQvxBW4aB8IMk6LDiLJO9nwQs4gedRpTssP4Zo=', 'asdf'); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',); alias=default
+(0.016) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'MS1_web'; args=('MS1_web',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'MS1_web' AND `django_content_type`.`model` = 'entry') LIMIT 21; args=('MS1_web', 'entry'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'MS1_web' AND `django_content_type`.`model` = 'user') LIMIT 21; args=('MS1_web', 'user'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (10, 11) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(10, 11); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'MS1_web'; args=('MS1_web',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'axes'; args=('axes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accessattempt') LIMIT 21; args=('axes', 'accessattempt'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accesslog') LIMIT 21; args=('axes', 'accesslog'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'axes' AND `django_content_type`.`model` = 'accessfailurelog') LIMIT 21; args=('axes', 'accessfailurelog'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 9, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 9, 7); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'axes'; args=('axes',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'authtoken'; args=('authtoken',); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'authtoken' AND `django_content_type`.`model` = 'token') LIMIT 21; args=('authtoken', 'token'); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'authtoken' AND `django_content_type`.`model` = 'tokenproxy') LIMIT 21; args=('authtoken', 'tokenproxy'); alias=default
+(0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (12, 13) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(12, 13); alias=default
+(0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'authtoken'; args=('authtoken',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE `user`.`username` = 'asdff' LIMIT 1; args=(1, 'asdff'); alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE (`user`.`email` = 'asdffff@gmail.com' AND `user`.`phone` = '09123456789' AND `user`.`username` = 'asdff') LIMIT 1; args=(1, 'asdffff@gmail.com', '09123456789', 'asdff'); alias=default
+(0.000) INSERT INTO `user` (`username`, `email`, `legal_name`, `pfp`, `phone`, `password`) VALUES ('asdff', 'asdffff@gmail.com', 'asdf', 'asdff/pfp/416165618_2658209914352873_2301489938403379781_n.png', '09123456789', 'asdfASDF@12341234'); args=('asdff', 'asdffff@gmail.com', 'asdf', 'asdff/pfp/416165618_2658209914352873_2301489938403379781_n.png', '09123456789', 'asdfASDF@12341234'); alias=default
+(0.000) UPDATE `user` SET `email` = 'asdffff@gmail.com', `legal_name` = 'asdf', `pfp` = 'asdff/pfp/416165618_2658209914352873_2301489938403379781_n.png', `phone` = '09123456789', `password` = 'pbkdf2_sha256$720000$ZjpkCuTZioZtKADbOIojCt$Oe/a44UZmAciICaWOEqzZy63nB9g47Cw2OOftBaUXQE=' WHERE `user`.`username` = 'asdff'; args=('asdffff@gmail.com', 'asdf', 'asdff/pfp/416165618_2658209914352873_2301489938403379781_n.png', '09123456789', 'pbkdf2_sha256$720000$ZjpkCuTZioZtKADbOIojCt$Oe/a44UZmAciICaWOEqzZy63nB9g47Cw2OOftBaUXQE=', 'asdff'); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.016) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE `user`.`username` = 'asdfff' LIMIT 1; args=(1, 'asdfff'); alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE (`user`.`email` = 'asdf@gmail.com' AND `user`.`phone` = '09111123113' AND `user`.`username` = 'asdfff') LIMIT 1; args=(1, 'asdf@gmail.com', '09111123113', 'asdfff'); alias=default
+(0.000) INSERT INTO `user` (`username`, `email`, `legal_name`, `pfp`, `phone`, `password`) VALUES ('asdfff', 'asdf@gmail.com', 'asdf', 'asdfff/pfp/toggers.png', '09111123113', 'asdfasdfadfasdf'); args=('asdfff', 'asdf@gmail.com', 'asdf', 'asdfff/pfp/toggers.png', '09111123113', 'asdfasdfadfasdf'); alias=default
+(0.016) UPDATE `user` SET `email` = 'asdf@gmail.com', `legal_name` = 'asdf', `pfp` = 'asdfff/pfp/toggers.png', `phone` = '09111123113', `password` = 'pbkdf2_sha256$720000$4ig6NRZgonYeN7DzDUCauo$s2xevu4MGVNis8LuAqpwxDGH0K7a+eyfamRw7BHZly8=' WHERE `user`.`username` = 'asdfff'; args=('asdf@gmail.com', 'asdf', 'asdfff/pfp/toggers.png', '09111123113', 'pbkdf2_sha256$720000$4ig6NRZgonYeN7DzDUCauo$s2xevu4MGVNis8LuAqpwxDGH0K7a+eyfamRw7BHZly8=', 'asdfff'); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.016) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE `user`.`username` = 'asdffff' LIMIT 1; args=(1, 'asdffff'); alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE (`user`.`email` = 'asdf@gmail.com' AND `user`.`phone` = '09123456780' AND `user`.`username` = 'asdffff') LIMIT 1; args=(1, 'asdf@gmail.com', '09123456780', 'asdffff'); alias=default
+(0.016) INSERT INTO `user` (`username`, `email`, `legal_name`, `pfp`, `phone`, `password`) VALUES ('asdffff', 'asdf@gmail.com', 'asdf', 'asdffff/pfp/Innova_NDP_5262_CR.jpg', '09123456780', 'asdfASDF@12341234'); args=('asdffff', 'asdf@gmail.com', 'asdf', 'asdffff/pfp/Innova_NDP_5262_CR.jpg', '09123456780', 'asdfASDF@12341234'); alias=default
+(0.000) UPDATE `user` SET `email` = 'asdf@gmail.com', `legal_name` = 'asdf', `pfp` = 'asdffff/pfp/Innova_NDP_5262_CR.jpg', `phone` = '09123456780', `password` = 'pbkdf2_sha256$720000$FeS6agrpCbJqUSkII17QoP$hvC4wFu3Abv40JNpY1SjlYaeTcg/se7zcd21uNg41Nw=' WHERE `user`.`username` = 'asdffff'; args=('asdf@gmail.com', 'asdf', 'asdffff/pfp/Innova_NDP_5262_CR.jpg', '09123456780', 'pbkdf2_sha256$720000$FeS6agrpCbJqUSkII17QoP$hvC4wFu3Abv40JNpY1SjlYaeTcg/se7zcd21uNg41Nw=', 'asdffff'); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.016) SELECT 1 AS `a` FROM `user` WHERE `user`.`username` = '1234' LIMIT 1; args=(1, '1234'); alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE (`user`.`email` = '1234@aadfs.asdf' AND `user`.`phone` = '09123456789' AND `user`.`username` = '1234') LIMIT 1; args=(1, '1234@aadfs.asdf', '09123456789', '1234'); alias=default
+(0.000) INSERT INTO `user` (`username`, `email`, `legal_name`, `pfp`, `phone`, `password`) VALUES ('1234', '1234@aadfs.asdf', 'asdf', '1234/pfp/toggers.png', '09123456789', 'asdfASDF@12341234'); args=('1234', '1234@aadfs.asdf', 'asdf', '1234/pfp/toggers.png', '09123456789', 'asdfASDF@12341234'); alias=default
+(0.000) UPDATE `user` SET `email` = '1234@aadfs.asdf', `legal_name` = 'asdf', `pfp` = '1234/pfp/toggers.png', `phone` = '09123456789', `password` = 'pbkdf2_sha256$720000$2CF1tgoQwan2MI7IPHgdEQ$jPacQji7NEW+HhfxhJeE/iXmXn0bjPXibMSaNFkHlK8=' WHERE `user`.`username` = '1234'; args=('1234@aadfs.asdf', 'asdf', '1234/pfp/toggers.png', '09123456789', 'pbkdf2_sha256$720000$2CF1tgoQwan2MI7IPHgdEQ$jPacQji7NEW+HhfxhJeE/iXmXn0bjPXibMSaNFkHlK8=', '1234'); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `user`.`username`, `user`.`email`, `user`.`legal_name`, `user`.`pfp`, `user`.`phone`, `user`.`password` FROM `user` WHERE `user`.`username` = 'asdf' LIMIT 21; args=('asdf',); alias=default
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE `user`.`username` = '1234f' LIMIT 1; args=(1, '1234f'); alias=default
+(0.000) SELECT 1 AS `a` FROM `user` WHERE (`user`.`email` = '1234@aadfs.asdf' AND `user`.`phone` = '09123456789' AND `user`.`username` = '1234f') LIMIT 1; args=(1, '1234@aadfs.asdf', '09123456789', '1234f'); alias=default
+(0.000) None; args=('1234f', '1234@aadfs.asdf', 'asdf', '1234f/pfp/toggers.png', '09123456789', 'asdfasdf@asdf1234'); alias=default

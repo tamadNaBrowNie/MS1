@@ -8,13 +8,13 @@
         <title>Home</title>
     </head>
     <body>
-        {% csrf_token %}
+        <form method="get" action = "search">{% csrf_token %}
         {{form}}
-        <button type="submit">Search</button>
-        {% for post in posts %}
+        <button type="submit">Search</button></form>
+        {% comment %} {% for post in posts %} {% endcomment %}
             <img style={{post.id}}>
             <p>{{post.txt}}</p>
-            <input value="Nyet" placeholder="Notes" style="position:absolute;left:421px;top:152px;">
-        {%endfor%}
+            <label value="{{post.title}}" placeholder="Notes" style="position:absolute;left:421px;top:152px;">
+        {% comment %} {%endfor%} {% endcomment %}
     </body>
 </html>

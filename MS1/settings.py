@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,7 +20,7 @@ SECURE_SSL_REDIRECT,SESSION_COOKIE_SECURE,CSRF_COOKIE_SECURE = True,True,True
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-g8n=x)+zr)m-_3m-jms7z3g1f34xpwjeu=$w^rmf30wr27tm75'
-
+# AUTH_USER_MODEL = 'MS1_web.User'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -30,6 +29,7 @@ SECURE_HSTS_SECONDS = 600
 SECURE_HSTS_SECONDS = True
 
 # Application definition
+ADMIN_LOGIN = 'admin'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'MS1_web',
     'axes',"django_extensions",
-    'rest_framework','rest_api'
+    'rest_framework','rest_api',
+    'rest_framework.authtoken',
 ]
 AUTHENTICATION_BACKENDS = [
    'axes.backends.AxesBackend',
@@ -55,16 +56,20 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'django_session_timeout.middleware.SessionTimeoutMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
+     'django_auto_logout.middleware.auto_logout',
 ]
-# REST_FRAMEWORK = {
-#     'DEFAULT_RENDERER_CLASSES': [
-#         'rest_framework.renderers.TemplateHTMLRenderer',
-#         'rest_framework.renderers.BrowsableAPIRenderer',
-#     ]
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.TemplateHTMLRenderer',
+        ],
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication', 
+    ],
+}
 ROOT_URLCONF = 'MS1.urls'
-
+STATIC_URL = "/"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -82,7 +87,8 @@ TEMPLATES = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-
+AUTO_LOGOUT = {'IDLE_TIME':10,'MESSAGE':'GET BENT'}
+TIMEOUT = 10
 AXES_FAILURE_LIMIT: 6
 AXES_COOLOFF_TIME: 1
 AXES_RESET_ON_SUCCESS = True
@@ -92,9 +98,10 @@ SESSION_COOKIE_AGE = 10
 SESSION_SECURITY_EXPIRE_AFTER = 10
 SESSION_SECURITY_WARN_AFTER = 5
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_EXPIRE_SECONDS = 10
-SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
-SESSION_TIMEOUT_REDIRECT = 'login'
+SESSION_EXPIRE_SECONDS = 5
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = False
+SESSION_TIMEOUT_REDIRECT = 'entry'
+SESSION_SAVE_EVERY_REQUEST = True
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -134,6 +141,10 @@ LOGGING = {
         }
     },
     'handlers': {
+         "file": {
+            "class": "logging.FileHandler",
+            "filename": "general.log",
+        },
         'console': {
             'level': 'DEBUG',
             'filters': ['require_debug_true'],
@@ -143,7 +154,7 @@ LOGGING = {
     'loggers': {
         'django.db.backends': {
             'level': 'DEBUG',
-            'handlers': ['console'],
+            'handlers': ['file'],
         }
     }
 }

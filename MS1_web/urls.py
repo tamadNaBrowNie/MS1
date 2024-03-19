@@ -19,7 +19,8 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-   path('register/',reg),
-    path('',land),
-    path('login/',login),
+   path('register/',reg, name ='register'),
+    path('',land,name = 'landing'),
+    path('login/',login,name='entry'),
+    path('home/',home,name='home'),
 ]

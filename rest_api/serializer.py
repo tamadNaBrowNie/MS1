@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from MS1_web.models import user
+from MS1_web.models import User
 
 import re
 # pw_v=[
@@ -35,7 +35,7 @@ class UserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Invalid Philippine Cellphone")
         return value
     class Meta:
-        model = user
+        model = User
         fields = '__all__'
 class ProfileSerializer(serializers.Serializer):
     pass
