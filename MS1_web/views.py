@@ -2,7 +2,7 @@ import logging
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password
 # from .models import User
-from .forms import UserForm,LoginForm,ChangePfp,SearchForm,ChangePw,DocForm
+from .forms import UserForm,LoginForm,ChangePfp,SearchForm,ChangePw,DocForm,SearchDoc
 from .models import user
 from django.contrib.auth.decorators import login_required
 from rest_api.serializer import UserSerializer
@@ -20,7 +20,7 @@ def home(req):
         data = req.session['data']
         logger = logging.getLogger('auth')
         logger.info(f'{data['username']} successfully entered')
-        return render(req,'home.html',{'form':SearchForm(),**data,'pfp_form':ChangePfp(),'pw_form':ChangePw,'doc_form':DocForm})
+        return render(req,'home.html',{'form':SearchForm(),**data,'pfp_form':ChangePfp(),'pw_form':ChangePw,'doc_form':DocForm,'finder_form':SearchDoc})
     except KeyError:
         return redirect('entry')
     except Exception as e:
