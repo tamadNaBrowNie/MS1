@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from MS1_web.models import User
+from MS1_web.models import user
 
 import re
 # pw_v=[
@@ -17,13 +17,7 @@ import re
 #             ),
 #         ]
 class UserSerializer(serializers.ModelSerializer):
-    def validate_pw(self,value):
-        username = serializers.CharField( max_length=255)
-        email = serializers.CharField(max_length=255)
-        legal_name = serializers.CharField(max_length=255)
-        pfp = serializers.ImageField()
-        phone = serializers.CharField( max_length=11)
-        pw = serializers.CharField(max_length=255)
+    def validate_password(self,value):
         regex = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$')    # Pattern Modified from https://ihateregex.io/expr/password/
 
         if not regex.match(value):
@@ -35,7 +29,7 @@ class UserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Invalid Philippine Cellphone")
         return value
     class Meta:
-        model = User
+        model = user
         fields = '__all__'
 class ProfileSerializer(serializers.Serializer):
     pass

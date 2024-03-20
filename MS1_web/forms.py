@@ -3,7 +3,7 @@ from .models import user,entry
 # ^(09|)\d{9}$
 class UserForm(ModelForm):
     username =CharField(required=True, max_length=16)
-    pw =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',
+    password =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',
                   )
     repeat_password =CharField(required=True, max_length=255, widget=PasswordInput)
     email = EmailField(required=True, max_length=255)
@@ -25,15 +25,13 @@ class SearchForm(ModelForm):
         model = user
         fields = ['username']
 class LoginForm(ModelForm):
-    pw =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',)
+    password =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',)
     class Meta:
         model = user
-        fields = ['username','pw']
+        fields = ['username',]
         
-class Archive(ModelForm):
-    title = CharField(required=True, max_length=255)
-    thumb = ImageField(required=False, )
-    doc = FileField(required=False,)
+class ChangePfp(ModelForm):
+    # pfp = ImageField(required=False,allow_empty_file=True)
     class Meta:
-        model = entry
-        fields = '__all__'
+        model = user
+        fields = ['pfp']

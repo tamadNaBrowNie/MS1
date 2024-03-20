@@ -1,7 +1,7 @@
 from django.shortcuts import redirect
 from rest_framework.decorators import api_view,renderer_classes
 from rest_framework.response import Response
-from MS1_web.models import User
+from MS1_web.models import user
 from django.contrib.auth.hashers import check_password,make_password
 from .serializer import UserSerializer
 from MS1_web.forms import UserForm
@@ -22,11 +22,17 @@ def LoginUser(request):
     if uname == 'admin' and creds['password'] == "I identify as 1/300 C because i'm a km/s":
         return Response('welcome admin', status =200)
     try:
-        rec =User.objects.get(pk=uname)
+        rec =user.objects.get(pk=uname)
         serial = UserSerializer(rec)
-        if not check_password(password = creds.get('password'),encoded = serial.data['password']):
+        data = {
+        'name':serial.data['username'],
+        'img':serial.data['pfp'],
+        'phone':serial.data['phone'],
+        'email':serial.data['email']
+        }
+        if not check_password(password = request.data['password'],encoded = serial.data['password']):
             return Response(serial.data,status=400,template_name = 'land.html')
-        request.session['data']=serial.data
+        request.session['data']=data
         request.session['auth']=make_password(uname)
         return redirect('home',)
     except ObjectDoesNotExist: 
@@ -35,20 +41,24 @@ def LoginUser(request):
 
 @api_view(['POST'])
 def NewUser(request):
+    
     serial = UserSerializer(data=request.data)
     try:
-        serial.is_valid(raise_exception=True)
+        valid = serial.is_valid(raise_exception=True)
+        if not valid: raise Exception(str(serial.errors))
+        # if request.data['password'] != request.query_params['password']:
+        #     raise Exception('Passwords unmatching')
         post = serial.save()
         post.password =make_password(request.data['password'])
         post.save()
         return redirect('entry')
     except Exception as e:
-        return Response(str(e),status=400)
+        return Response({'err':str(e)},status=400,template_name = 'err.html')
 @api_view(['GET'])
 @renderer_classes([TemplateHTMLRenderer])
 def SeeUser(request):
     param = request.query_params
-    rec =User.objects.get( pk=param['username'])
+    rec =user.objects.get( pk=param['username'])
     serial = UserSerializer(rec)
     
     data = {

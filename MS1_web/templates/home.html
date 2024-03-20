@@ -8,13 +8,23 @@
         <title>Home</title>
     </head>
     <body>
+ 
         <form method="get" action = "search">{% csrf_token %}
         {{form}}
-        <button type="submit">Search</button></form>
-        {% comment %} {% for post in posts %} {% endcomment %}
+        <button type="submit">Search</button>
+        </form>       
+        <form method="put" action = "pfp">{% csrf_token %}
+            {{pfp_form}}
+        <button type="submit">Change Pfp</button>
+        </form>
+        {% comment %} {{img}} {% endcomment %}
+        <img src="{{img}}">
+        {{name}}
+        {{phone}}
+        {{email}}
             <img style={{post.id}}>
             <p>{{post.txt}}</p>
             <label value="{{post.title}}" placeholder="Notes" style="position:absolute;left:421px;top:152px;">
-        {% comment %} {%endfor%} {% endcomment %}
+
     </body>
 </html>
