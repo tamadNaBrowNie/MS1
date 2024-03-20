@@ -26,7 +26,8 @@ class user(AbstractBaseUser):
     email = models.EmailField(max_length=255)
     legal_name = models.CharField(max_length=255)
     pfp = models.ImageField(blank=True, null=True,
-                            upload_to= pfp
+                            upload_to= pfp,
+                            # allow_empty=True
                            )
     phone = models.CharField(max_length=11,) 
     password = models.CharField(max_length=255,)

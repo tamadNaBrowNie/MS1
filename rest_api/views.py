@@ -1,4 +1,5 @@
 from django.shortcuts import redirect
+from rest_framework.serializers import ValidationError
 from rest_framework.decorators import api_view,renderer_classes
 from rest_framework.response import Response
 from MS1_web.models import user
@@ -40,20 +41,23 @@ def LoginUser(request):
     
 
 @api_view(['POST'])
+
+@renderer_classes([TemplateHTMLRenderer])
 def NewUser(request):
     
     serial = UserSerializer(data=request.data)
     try:
-        valid = serial.is_valid(raise_exception=True)
-        if not valid: raise Exception(str(serial.errors))
-        # if request.data['password'] != request.query_params['password']:
-        #     raise Exception('Passwords unmatching')
+        serial.is_valid(raise_exception=True)
+        # if not valid: raise ValidationError(str(serial.errors))
+        if request.data['password'] != request.data['repeat_password']:
+            raise ValueError('Unmatched Passwords')
+            # return Response({'err':'foo','bar':'bar'},status=400,template_name = 'err.html')
         post = serial.save()
         post.password =make_password(request.data['password'])
         post.save()
         return redirect('entry')
     except Exception as e:
-        return Response({'err':str(e)},status=400,template_name = 'err.html')
+        return Response({'err':str(e),'t':3},status=400,template_name = 'err.html')
 @api_view(['GET'])
 @renderer_classes([TemplateHTMLRenderer])
 def SeeUser(request):

@@ -31,7 +31,14 @@ class LoginForm(ModelForm):
         fields = ['username',]
         
 class ChangePfp(ModelForm):
-    # pfp = ImageField(required=False,allow_empty_file=True)
     class Meta:
         model = user
         fields = ['pfp']
+class ChangePw(ModelForm):
+    old =CharField(required=True, max_length=255, widget=PasswordInput,label='Old Password',)
+    changed =CharField(required=True, max_length=255, widget=PasswordInput,label='New Password',)
+    repeat =CharField(required=True, max_length=255, widget=PasswordInput,label='Repeat Password',)
+    class Meta:
+        model = user
+        fields = []
+        
