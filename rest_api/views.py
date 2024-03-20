@@ -10,15 +10,34 @@ from rest_framework.renderers import TemplateHTMLRenderer
 # Create your views here.
 from rest_framework.parsers import JSONParser 
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.files.storage import FileSystemStorage
 import re
 # from backends.base.SessionBase import get_session_cookie_age
+# @api_view(['POST'])
+# def newPFP(req):
+#     name = req.session['data']['name']
+#     rec =user.objects.get(pk=name)
+#     fs = FileSystemStorage
+#     pfp = req.data['pfp'].name
+#     rec.pfp = pfp
+#     rec.save
+#     # serial =  UserSerializer(rec)
+#     # serial.data['pfp'] = req.data['pfp'].str()
+#     # serial.save
+#     data = {
+#         'name':rec.username,
+#         'img':rec.pfp,
+#         'phone':rec.phone,
+#         'email':rec.email
+#         }
+#     req.session['data'] = data
+#     return redirect('home')
 @api_view(['POST'])
 def newPW(req):
     try:
         name = req.session['data']['name']
         rec =user.objects.get(pk=name)
-        serial = UserSerializer(rec)
-        if not check_password(password = req.data['old'],encoded = serial.data['password']):
+        if not check_password(password = req.data['old'],encoded = rec.password):
             raise ValueError('Not Password')
         regex = re.compile('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$')    # Pattern Modified from https://ihateregex.io/expr/password/
 

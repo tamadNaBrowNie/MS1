@@ -16,7 +16,6 @@ class Migration(migrations.Migration):
             name='entry',
             fields=[
                 ('ind', models.AutoField(primary_key=True, serialize=False)),
-                ('thumb', models.ImageField(blank=True, null=True, upload_to=MS1_web.models.thumb)),
                 ('doc', models.FileField(blank=True, null=True, upload_to=MS1_web.models.doc)),
                 ('title', models.CharField(max_length=255)),
             ],

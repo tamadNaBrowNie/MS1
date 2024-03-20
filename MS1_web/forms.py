@@ -1,5 +1,5 @@
-from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,ValidationError,FileField
-from .models import user
+from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,FileField
+from .models import user,doc
 from django.core.validators import RegexValidator
 # ^(09|)\d{9}$
 class UserForm(ModelForm):
@@ -30,8 +30,20 @@ class LoginForm(ModelForm):
     class Meta:
         model = user
         fields = ['username',]
-        
+def pfp(instance, filename): return f"{instance.username}/pfp/{filename}"    
+class DocForm(ModelForm):
+# The lines `ind = AutoField()` and `owner = ForeignKey()` in the `DocForm` class are defining fields
+# for the `doc` model form.
+    # ind =  AutoField()
+    # owner = ForeignKey()
+    title =CharField(max_length=255,required=True)
+    file = FileField(required=False,allow_empty_file=True  )
+    class Meta:
+        model = doc
+        fields =['title','file']
 class ChangePfp(ModelForm):
+    def is_valid(self) -> bool:
+        return True
     class Meta:
         model = user
         fields = ['pfp']

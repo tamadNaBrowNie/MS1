@@ -23,4 +23,6 @@ urlpatterns = [
     path('',land,name = 'landing'),
     path('login/',login,name='entry'),
     path('home/',home,name='home'),
+    path('home/pfp/',newPFP),
+
 ]

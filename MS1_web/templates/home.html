@@ -8,12 +8,12 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>WeCum To insecure sh*t Doc Repo</h1>
+        <h1>Wecum To Insecure S*t Doc Repo</h1>
         <form method="get" action = "search">{% csrf_token %}
         {{form}}
         <button type="submit">Search</button>
         </form>       
-        <form method="put" action = "pfp">{% csrf_token %}
+        <form method="POST" action = "pfp/" enctype="multipart/form-data">{% csrf_token %}
             <label>Change Profile Picture </label>
             {{pfp_form}}
         <button type="submit">Change Profile Picture </button>
@@ -22,6 +22,11 @@
             <label>Change Password </label>
             {{pw_form}}
         <button type="submit">Change Password</button>
+        </form>
+        <form method="POST" action = "doc/">{% csrf_token %}
+            <label>Upload Doc </label>
+            {{doc_form}}
+        <button type="submit">upload doc</button>
         </form>
         {% comment %} {{img}} {% endcomment %}
         <img src="{{img}}">
