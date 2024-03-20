@@ -1,5 +1,6 @@
 from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,ValidationError,FileField
-from .models import user,entry
+from .models import user
+from django.core.validators import RegexValidator
 # ^(09|)\d{9}$
 class UserForm(ModelForm):
     username =CharField(required=True, max_length=16)
@@ -36,8 +37,13 @@ class ChangePfp(ModelForm):
         fields = ['pfp']
 class ChangePw(ModelForm):
     old =CharField(required=True, max_length=255, widget=PasswordInput,label='Old Password',)
-    changed =CharField(required=True, max_length=255, widget=PasswordInput,label='New Password',)
-    repeat =CharField(required=True, max_length=255, widget=PasswordInput,label='Repeat Password',)
+    new =CharField(required=True, max_length=255, widget=PasswordInput,label='New Password', validators=[
+            RegexValidator(
+                r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$',
+                message="Password length is 16-255. Has upper case and lower case English letter, special character, and numbers. "
+            )
+        ])
+    again =CharField(required=True, max_length=255, widget=PasswordInput,label='Repeat Password',)
     class Meta:
         model = user
         fields = []
