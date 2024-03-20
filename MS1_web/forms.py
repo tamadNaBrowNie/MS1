@@ -25,6 +25,10 @@ class SearchForm(ModelForm):
     class Meta:
         model = user
         fields = ['username']
+class SearchDoc(ModelForm):
+    class Meta:
+        model = doc
+        fields = ['title','owner']
 class LoginForm(ModelForm):
     password =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',)
     class Meta:
