@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
+import logging
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -61,7 +62,9 @@ MIDDLEWARE = [
 ]
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.BrowsableAPIRenderer',
         'rest_framework.renderers.TemplateHTMLRenderer',
+        
         ],
     
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -151,12 +154,15 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django.db.backends': {
-            'level': 'DEBUG',
+       logger_name: {
+            'level': 'INFO',
             'handlers': ['file'],
-        }
+            'propagate':True,
+       }for logger_name in ('django','django.db','django.contrib.sessions','core','rest_framework') 
+        
     }
 }
+logger = logging.getLogger(__name__)
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

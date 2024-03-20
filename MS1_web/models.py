@@ -1,19 +1,16 @@
-# This is an auto-generated Django model module.
-# You'll have to do the following manually to clean this up:
-#   * Rearrange models' order
-#   * Make sure each model has one field with primary_key=True
-#   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
-#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
-# Feel free to rename the models, but don't rename db_table values or field names.
+
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser
-# thumb = None
+# from django.contrib.auth.models import AbstractBaseUser
+from django.core.validators import RegexValidator
+
 def post(instance, filename):return f"{instance.title}/doc/{filename}"
 class doc(models.Model):
+    owner_id = None
     ind =  models.AutoField(primary_key=True)
-    owner = models.ForeignKey(to='user', on_delete=models.CASCADE, to_field='username',)
+    owner = models.ForeignKey(to='user', on_delete=models.CASCADE, related_name='entries')
     file = models.FileField(blank=True, null=True,   upload_to=post )
     title = models.CharField(max_length=255,null = False)
+
     class Meta:
         managed = False
         db_table = 'posts'
@@ -26,6 +23,12 @@ class user(models.Model):
     legal_name = models.CharField(max_length=255)
     pfp = models.ImageField(blank=True, null=True,
                             upload_to= pfp,
+                            validators=[
+            RegexValidator(
+                r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$',
+                message="Password length is 16-255. Has upper case and lower case English letter, special character, and numbers. "
+            )
+        ]
                             # allow_empty=True
                            )
     phone = models.CharField(max_length=11,) 

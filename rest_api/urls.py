@@ -23,6 +23,6 @@ urlpatterns = [
    path('login/submit',LoginUser),
    path('home/search/',SeeUser),
    path('home/pw/',newPW),  
-#    path('home/pfp/',newPFP),
+   path('home/doc/',NewDoc),
 
 ]

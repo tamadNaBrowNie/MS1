@@ -28,6 +28,11 @@
             {{doc_form}}
         <button type="submit">upload doc</button>
         </form>
+        <form method="POST" action = "doc/">{% csrf_token %}
+            <label>Find Doc </label>
+            {{finder_form}}
+        <button type="submit">search doc</button>
+        </form>
         {% comment %} {{img}} {% endcomment %}
         <img src="{{img}}">
         {{name}}

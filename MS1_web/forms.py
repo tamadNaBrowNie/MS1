@@ -1,6 +1,6 @@
 from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,FileField
 from .models import user,doc
-from django.core.validators import RegexValidator
+
 # ^(09|)\d{9}$
 class UserForm(ModelForm):
     username =CharField(required=True, max_length=16)
@@ -29,7 +29,7 @@ class LoginForm(ModelForm):
     password =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',)
     class Meta:
         model = user
-        fields = ['username',]
+        fields = ['username','password']
 def pfp(instance, filename): return f"{instance.username}/pfp/{filename}"    
 class DocForm(ModelForm):
 # The lines `ind = AutoField()` and `owner = ForeignKey()` in the `DocForm` class are defining fields
@@ -49,12 +49,7 @@ class ChangePfp(ModelForm):
         fields = ['pfp']
 class ChangePw(ModelForm):
     old =CharField(required=True, max_length=255, widget=PasswordInput,label='Old Password',)
-    new =CharField(required=True, max_length=255, widget=PasswordInput,label='New Password', validators=[
-            RegexValidator(
-                r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$',
-                message="Password length is 16-255. Has upper case and lower case English letter, special character, and numbers. "
-            )
-        ])
+    new =CharField(required=True, max_length=255, widget=PasswordInput,label='New Password', )
     again =CharField(required=True, max_length=255, widget=PasswordInput,label='Repeat Password',)
     class Meta:
         model = user

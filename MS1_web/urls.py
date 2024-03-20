@@ -24,5 +24,6 @@ urlpatterns = [
     path('login/',login,name='entry'),
     path('home/',home,name='home'),
     path('home/pfp/',newPFP),
+    path('admin/',to_admin)
 
 ]
