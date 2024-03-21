@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'axes',"django_extensions",
     'rest_framework','rest_api',
     'rest_framework.authtoken',
+    'file_validator',
 ]
 AUTHENTICATION_BACKENDS = [
    'axes.backends.AxesBackend',
@@ -134,6 +135,9 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+FILE_UPLOAD_HANDLERS = [
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
 ]
 LOGGING = {
     'version': 1,

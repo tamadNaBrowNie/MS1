@@ -17,7 +17,7 @@ import re
 #             ),
 #         ]
 
-class DocSerializer(serializers.Serializer):
+class DocSerializer(serializers.ModelSerializer):
     # owner = serializers.RelatedField(read_only=True,many=False)
     class Meta:
         model = doc

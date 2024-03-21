@@ -20940,3 +20940,2366 @@ Not Found: /favicon.ico
 Internal Server Error: /home/search/
 Bad Request: /home/search/
 Bad Request: /home/search/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /register/submit
+Bad Request: /register/submit
+Not Found: /favicon.ico
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Bad Request: /register/submit
+Not Found: /home/None
+Bad Request: /register/submit
+Not Found: /favicon.ico
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_auto_logout\middleware.py", line 46, in middleware
+    return get_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 41, in null_technical_500_response
+    raise exc_value
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\axes\middleware.py", line 47, in __call__
+    response = self.get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\2sql.png) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_auto_logout\middleware.py", line 46, in middleware
+    return get_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 41, in null_technical_500_response
+    raise exc_value
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\axes\middleware.py", line 47, in __call__
+    response = self.get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_auto_logout\middleware.py", line 46, in middleware
+    return get_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 41, in null_technical_500_response
+    raise exc_value
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\deprecation.py", line 134, in __call__
+    response = response or self.get_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\axes\middleware.py", line 47, in __call__
+    response = self.get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 130, in response_for_exception
+    response = debug.technical_500_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django_extensions\management\technical_response.py", line 40, in null_technical_500_response
+    raise exc_value.with_traceback(tb)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 139, in newDoc
+    if DEBUG: raise e
+              ^^^^^^^
+  File "C:\Documents\MS1.worktrees\django_dev\rest_api\views.py", line 135, in newDoc
+    rec.clean_fields()
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\base.py", line 1572, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 831, in clean
+    self.run_validators(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\__init__.py", line 783, in run_validators
+    v(value)
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\file_validator\models.py", line 208, in __call__
+    current_file = value.file
+                   ^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\db\models\fields\files.py", line 48, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\base.py", line 22, in open
+    return self._open(name, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 68, in _open
+    return File(open(self.path(name), mode))
+                     ^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\core\files\storage\filesystem.py", line 179, in path
+    return safe_join(self.location, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\django_dev-XjbIfod0\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\asdf\doc\DS4.pdf) is located outside of the base path component (C:\Documents\MS1.worktrees\django_dev\media)
+Not Found: /favicon.ico
+Bad Request: /home/doc/
+Not Found: /favicon.ico
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Bad Request: /home/doc/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /home/doc/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Bad Request: /home/doc/
+Not Found: /favicon.ico
+Not Found: /login/admin/
+Not Found: /login/admin/

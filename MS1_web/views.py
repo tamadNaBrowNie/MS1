@@ -2,8 +2,8 @@ import logging
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password
 # from .models import User
-from .forms import UserForm,LoginForm,ChangePfp,SearchForm,ChangePw,DocForm,SearchDoc
-from .models import user
+from .forms import *
+from .models import user,doc
 from django.contrib.auth.decorators import login_required
 from rest_api.serializer import UserSerializer
 from MS1.settings import DEBUG
@@ -19,9 +19,10 @@ def home(req):
     try:
         data = req.session['data']
         logger = logging.getLogger('auth')
-        logger.info(f'{data['username']} successfully entered')
+        logger.info(f'{data['name']} successfully entered')
         return render(req,'home.html',{'form':SearchForm(),**data,'pfp_form':ChangePfp(),'pw_form':ChangePw,'doc_form':DocForm,'finder_form':SearchDoc})
-    except KeyError:
+    except KeyError as e:
+        if DEBUG: raise e
         return redirect('entry')
     except Exception as e:
         if DEBUG: raise e
@@ -56,9 +57,12 @@ def newPFP(req):
    except Exception as e:
         if DEBUG: raise e
         else: return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})
+
+
 def to_admin(request):
-    pass
-    
+    if request.session['is_admin']:
+        return render(request, 'admin.html',{'name_form':ChangeName})
+    else: return redirect('')
 
 
 # return render(req,'make.html',{'form':Archive()})

@@ -4,34 +4,29 @@ from rest_framework.decorators import api_view,renderer_classes
 from rest_framework.response import Response
 from MS1_web.models import user,doc
 from django.contrib.auth.hashers import check_password,make_password
-from .serializer import UserSerializer
-from MS1_web.forms import UserForm
+from .serializer import UserSerializer,DocSerializer
+from MS1_web.forms import DocForm
 from rest_framework.renderers import TemplateHTMLRenderer,BrowsableAPIRenderer
 # Create your views here.
 from rest_framework.parsers import JSONParser 
 from django.core.exceptions import ObjectDoesNotExist
 import re
 from MS1.settings import DEBUG
-# from backends.base.SessionBase import get_session_cookie_age
-# @api_view(['POST'])
-# def newPFP(req):
-#     name = req.session['data']['name']
-#     rec =user.objects.get(pk=name)
-#     fs = FileSystemStorage
-#     pfp = req.data['pfp'].name
-#     rec.pfp = pfp
-#     rec.save
-#     # serial =  UserSerializer(rec)
-#     # serial.data['pfp'] = req.data['pfp'].str()
-#     # serial.save
-#     data = {
-#         'name':rec.username,
-#         'img':rec.pfp,
-#         'phone':rec.phone,
-#         'email':rec.email
-#         }
-#     req.session['data'] = data
-#     return redirect('home')
+@api_view(['POST'])
+def newName(req):
+    try:
+        uname = req.data['username']
+        name = req.data['legal_name']
+        rec =user.objects.get(pk=uname)
+        rec.legal_name = name
+        rec.save()
+        req.session['is_admin'] = True
+        return redirect('admin')
+    except ObjectDoesNotExist as e: 
+            return Response({'err':'Unmatched user','t':3},status=400,template_name = 'err.html')
+    except Exception as e:
+        if not DEBUG:return Response({'err':'Error occured','t':5,'url':''}, status=500,template_name='err.html',)
+        raise e
 @api_view(['POST'])
 def newPW(req):
     try:
@@ -62,7 +57,8 @@ def LoginUser(request):
     uname = creds['username']
    
     if uname == 'admin' and creds['password'] == "I identify as 1/300 C because i'm a km/s":
-        return Response('welcome admin', status =200)
+        request.session['is_admin'] = True
+        return redirect('admin')
     try:
         rec =user.objects.get(pk=uname)
         serial = UserSerializer(rec)
@@ -80,10 +76,11 @@ def LoginUser(request):
     except ObjectDoesNotExist as e: 
         return Response({'err':'Unmatched user','t':3},status=400,template_name = 'err.html')
     except Exception as e:
-        if DEBUG:return Response({'err':'Error occured','t':5,'url':''}, status=500,template_name='err.html',)
+        if not DEBUG:return Response({'err':'Error occured','t':5,'url':''}, status=500,template_name='err.html',)
+        raise e
 
 @api_view(['POST'])
-# @renderer_classes([TemplateHTMLRenderer,BrowsableAPIRenderer])
+@renderer_classes([TemplateHTMLRenderer,BrowsableAPIRenderer])
 def NewUser(request):
     
     serial = UserSerializer(data=request.data)
@@ -98,11 +95,12 @@ def NewUser(request):
         post.save()
         return redirect('entry')
     except (ValueError,ValidationError) as e:
-            return Response({'err':str(e),'t':3},status=400,template_name = 'err.html')
+            # if DEBUG: raise e
+            return Response({'err':str(e),'t':20},status=400,template_name = 'err.html')
     
     except Exception as e:
             if DEBUG: raise e
-    finally: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
+            else: return Response({'err':'Error?','t':10,'url':''}, status=500,template_name='err.html',)
 @api_view(['GET'])
 @renderer_classes([TemplateHTMLRenderer])
 def SeeUser(request):
@@ -124,14 +122,85 @@ def SeeUser(request):
         if DEBUG: raise e
         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
 @api_view(['POST'])
-def NewDoc(req):
+# @renderer_classes([TemplateHTMLRenderer])
+def newDoc(req):
     param = req.data
+    # serial = DocSerializer(data=req.data)
     try:
         name =req.session['data']['name']
         sesh =user.objects.get(pk=name)
-        rec = doc(owner =sesh,file = f'/{sesh.username}/doc/{param['file']}',title = param['title'])
+        serial = UserSerializer(sesh)
+        
+        data = {
+            'name':serial.data['username'],
+            'img':serial.data['pfp'],
+            'phone':serial.data['phone'],
+            'email':serial.data['email']
+            }
+        req.session['data'] = data
+        # serial.is_valid(raise_exception=True) 
+        # serial.save()
+        # rec = doc(owner =sesh,file = f'/{sesh.username}/doc/{param['file']}',title = param['title'])
+        rec = DocSerializer(data=req.data)
+        rec.is_valid(raise_exception = True)
+        # rec.clean_fields()
         rec.save()
         return redirect('home')
     except Exception as e:
         if DEBUG: raise e
-    finally: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
+        else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
+# @api_view(['POST'])
+# # @renderer_classes([TemplateHTMLRenderer])
+# def newDoc(req):
+#     param = req.data
+#     # serial = DocSerializer(data=req.data)
+#     try:
+#         if req.method != 'POST':
+#             return redirect('home')
+#         name =req.session['data']['name']
+#         rec = doc(owner =sesh,file =req.FILES',title = param['title'])
+#         form =  DocForm(req.POST, req.FILES,)
+#         sesh =user.objects.get(pk=name)
+#         data = {
+#             'name':sesh.username,
+#             'img':sesh.pfp,
+#             'phone':sesh.phone,
+#             'email':sesh.email,
+#             }
+#         req.session['data'] = data
+#         # serial.is_valid(raise_exception=True) 
+#         # serial.save()
+#         # rec = doc(owner =sesh,file = f'/{sesh.username}/doc/{param['file']}',title = param['title'])
+#         # rec.clean_fields()
+#         # rec.save()
+#         return redirect('home')
+#     except Exception as e:
+#         if DEBUG: raise e
+#         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
+#     try:
+        
+#         name = req.session['data']['name']
+#         rec =user.objects.get(pk=name)
+#         form =  ChangePfp(req.POST, req.FILES, instance=rec)
+#         if form.is_valid():
+#             form.save()
+#         # rec.pfp = f'{name}/pfp/{req.FILES['pfp'].name}'
+#         # # rec.pfp = req.data['pfp']
+#         # rec.save()
+    
+#         # form = ChangePfp(req.POST,req.FILES,instance = rec)
+#         # if not form.is_valid():
+#         #     return redirect("/home")
+#         # form.save()
+#         rec =user.objects.get(pk=name)
+#         serial = UserSerializer(rec)
+#         req.session['data'] =  {
+#                 'name':serial.data['username'],
+#                 'img':serial.data['pfp'],
+#                 'phone':serial.data['phone'],
+#                 'email':serial.data['email']
+#                 }
+#         return redirect('home')
+#     except Exception as e:
+#         if DEBUG: raise e
+#         else: return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})
