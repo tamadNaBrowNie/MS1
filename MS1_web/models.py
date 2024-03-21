@@ -18,13 +18,13 @@ class doc(models.Model):
 def pfp(instance, filename): return f"{instance.username}/pfp/{filename}"
 class user(models.Model):
     last_login = None
-    username = models.CharField(primary_key=True,unique=True, max_length=255)
-    email = models.EmailField(max_length=255)
-    legal_name = models.CharField(max_length=255)
-    pfp = models.ImageField(blank=True, null=True,
+    username = models.CharField(primary_key=True,unique=True, max_length=16)
+    email = models.EmailField(required=True,max_length=255)
+    legal_name = models.CharField(equired=True,max_length=255)
+    pfp = models.ImageField(required=False,allow_empty_file=True,blank=True, null=True,
                             upload_to= pfp,                            # allow_empty=True
                            )
-    phone = models.CharField(max_length=11,) 
+    phone = models.CharField(required=True,max_length=11,) 
     password = models.CharField(max_length=255,validators=[
             RegexValidator(
                 r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$',

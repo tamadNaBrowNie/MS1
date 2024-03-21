@@ -53,14 +53,6 @@ def newPFP(req):
         if form.is_valid():
             form.save()
             logger.info(f'{name} changed pfp to {req.FILES['pfp'].name}')
-        # rec.pfp = f'{name}/pfp/{req.FILES['pfp'].name}'
-        # # rec.pfp = req.data['pfp']
-        # rec.save()
-    
-        # form = ChangePfp(req.POST,req.FILES,instance = rec)
-        # if not form.is_valid():
-        #     return redirect("/home")
-        # form.save()
         rec =user.objects.get(pk=name)
         serial = UserSerializer(rec)
         req.session['data'] =  {
@@ -102,11 +94,7 @@ def rmDoc(request, ind):
     logger.info(f'admin removing {mem}')
     mem.delete()
     return redirect('admin')
-  
 
-# return render(req,'make.html',{'form':Archive()})
-# def hello(request):
-#     return HttpResponse('Hello')
 @file_upload_config(
   file_size_limit=2000000,
   keep_original_filename=True,
