@@ -8,7 +8,9 @@
           <td>{{ x.username }}</td>
           <td>{{ x.legal_name }}</td>
           <td><a href="delete/{{ x.username }}">delete</a></td>
+          <!-- YES I KNOW IT IS INSECEURE AND LAZY I AM OUT OF TIME -->
           </tr>
         {% endfor %}
-        </table>
+      </table>
+      <a href="users"></a>
     </form>

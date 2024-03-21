@@ -23,7 +23,7 @@ def home(req):
         logger.info(data['name']+' successfully entered')
         return render(req,'home.html',{'form':SearchForm(),**data,'pfp_form':ChangePfp(),'pw_form':ChangePw,'doc_form':DocForm,'finder_form':SearchDoc})
     except KeyError as e:
-        if DEBUG: raise e
+        # if DEBUG: raise e
         return redirect('entry')
     except Exception as e:
         if DEBUG: raise e
