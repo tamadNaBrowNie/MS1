@@ -36,12 +36,8 @@ class LoginForm(ModelForm):
         fields = ['username','password']
 def pfp(instance, filename): return f"{instance.username}/pfp/{filename}"    
 class DocForm(ModelForm):
-# The lines `ind = AutoField()` and `owner = ForeignKey()` in the `DocForm` class are defining fields
-# for the `doc` model form.
-    # ind =  AutoField()
-    # owner = ForeignKey()
     title =CharField(max_length=255,required=True)
-    file = FileField(required=False,allow_empty_file=True  )
+    file = FileField(required=True,allow_empty_file=True  )
     class Meta:
         model = doc
         fields =['title','file']
