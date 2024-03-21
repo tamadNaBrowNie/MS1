@@ -28,23 +28,13 @@ CREATE TABLE `user` (
   `username` varchar(16) NOT NULL,
   `email` varchar(255) NOT NULL,
   `legal_name` varchar(255) NOT NULL,
-  `pfp` mediumblob,
   `phone` varchar(11) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `pfp` text,
   PRIMARY KEY (`username`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `phone_UNIQUE` (`phone`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user`
---
-
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -75,12 +65,14 @@ DROP TABLE IF EXISTS `posts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `posts` (
-  `ind` int unsigned NOT NULL AUTO_INCREMENT,
+  `Ind` int unsigned NOT NULL AUTO_INCREMENT,
+  `file` text NOT NULL,
   `title` varchar(255) NOT NULL,
-  `file` text,
-  PRIMARY KEY (`ind`),
-  UNIQUE KEY `ind_UNIQUE` (`ind`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`Ind`),
+  UNIQUE KEY `Ind_UNIQUE` (`Ind`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 LOCK TABLES `posts` WRITE;
