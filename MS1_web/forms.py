@@ -1,6 +1,6 @@
 from django.forms import ModelForm,CharField,PasswordInput,ImageField,EmailField,FileField
 from .models import user,doc
-from file_validator.forms import ValidatedFileField
+# from file_validator.forms import ValidatedFileField
 # ^(09|)\d{9}$
 class UserForm(ModelForm):
     username =CharField(required=True, max_length=16)

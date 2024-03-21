@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'axes',"django_extensions",
     'rest_framework','rest_api',
     'rest_framework.authtoken',
-    'file_validator',
+
 ]
 AUTHENTICATION_BACKENDS = [
    'axes.backends.AxesBackend',
@@ -104,8 +104,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 SESSION_TIMEOUT_REDIRECT = 'entry'
 SESSION_SAVE_EVERY_REQUEST = True
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
 
 DATABASES = {
      'default': {
@@ -118,8 +117,7 @@ DATABASES = {
     }
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -136,7 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 FILE_UPLOAD_HANDLERS = [
-    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+    # 'django.core.files.uploadhandler.TemporaryFileUploadHandler',
 ]
 LOGGING = {
     'version': 1,
@@ -171,8 +169,6 @@ LOGGING = {
 
 logger = logging.getLogger(__name__)
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
