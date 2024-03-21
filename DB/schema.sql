@@ -30,7 +30,7 @@ CREATE TABLE `user` (
   `legal_name` varchar(255) NOT NULL,
   `pfp` mediumblob,
   `phone` varchar(11) NOT NULL,
-  `pw` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   PRIMARY KEY (`username`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `phone_UNIQUE` (`phone`)

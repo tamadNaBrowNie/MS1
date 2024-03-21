@@ -20,7 +20,7 @@ def home(req):
     try:
         data = req.session['data']
         logger = logging.getLogger('auth')
-        logger.info(f'{data['name']} successfully entered')
+        logger.info(data['name']+' successfully entered')
         return render(req,'home.html',{'form':SearchForm(),**data,'pfp_form':ChangePfp(),'pw_form':ChangePw,'doc_form':DocForm,'finder_form':SearchDoc})
     except KeyError as e:
         if DEBUG: raise e

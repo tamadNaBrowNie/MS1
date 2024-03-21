@@ -23,7 +23,7 @@
             {{pw_form}}
         <button type="submit">Change Password</button>
         </form>
-        <form method="POST" action = "doc/">{% csrf_token %}
+        <form method="POST" action = "doc/" enctype="multipart/form-data">{% csrf_token %}
             <label>Upload Doc </label>
             {{doc_form}}
         <button type="submit">upload doc</button>
