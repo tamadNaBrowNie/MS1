@@ -2,5 +2,13 @@
     {% csrf_token %}
     {{name_form}}
     <input type="submit" value="Create" class="input submit">
-    
+    <table>
+        {% for x in users %}
+          <tr>
+          <td>{{ x.username }}</td>
+          <td>{{ x.legal_name }}</td>
+          <td><a href="delete/{{ x.username }}">delete</a></td>
+          </tr>
+        {% endfor %}
+        </table>
     </form>

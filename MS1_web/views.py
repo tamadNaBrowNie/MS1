@@ -5,6 +5,7 @@ from django.contrib.auth.hashers import make_password
 from .forms import *
 from .models import user,doc
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseNotFound
 from rest_api.serializer import UserSerializer
 from MS1.settings import DEBUG
 # Create your views here.
@@ -60,10 +61,18 @@ def newPFP(req):
 
 
 def to_admin(request):
-    if request.session['is_admin']:
-        return render(request, 'admin.html',{'name_form':ChangeName})
-    else: return redirect('')
+    if not request.session['is_admin']:
+        return HttpResponseNotFound("<h1>Page not found</h1>")
+    users = user.objects.all().values()
+    return render(request, 'admin.html',{'name_form':ChangeName,'users':users})
 
+def delete(request, username):
+    if not request.session['is_admin']:
+        return HttpResponseNotFound("<h1>Page not found</h1>")
+    mem = user.objects.get(pk=username)
+    mem.delete()
+    return redirect('admin')
+  
 
 # return render(req,'make.html',{'form':Archive()})
 # def hello(request):

@@ -25,5 +25,6 @@ urlpatterns = [
     path('home/',home,name='home'),
     path('home/pfp/',newPFP),
     path('admin/',to_admin,name ='admin'),
+    path('admin/delete/<str:username>',delete,name ='admin'),
 
 ]
