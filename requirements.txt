@@ -17,7 +17,6 @@ django-stubs-ext==4.2.7
 djangorestframework==3.14.0
 easygui==0.98.3
 ExifRead==3.0.0
-file-validator==1.0.9
 filelock==3.13.1
 filetype==1.1.0
 humanize==4.4.0

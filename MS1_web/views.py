@@ -76,22 +76,30 @@ def newPFP(req):
 
 
 def to_admin(request):
+
     if not request.session['is_admin']:
+        logger.info('invalid admin entry')
         return HttpResponseNotFound("<h1>Page not found</h1>")
+    
+    logger.info('valid admin entry')
     users = user.objects.all().values()
     docs = doc.objects.all().values()
     return render(request, 'admin.html',{'name_form':ChangeName,'users':users,'docs':docs})
 
 def rmUser(request, username):
     if not request.session['is_admin']:
+        logger.info('invalid admin entry')
         return HttpResponseNotFound("<h1>Page not found</h1>")
     mem = user.objects.get(pk=username)
+    logger.info(f'admin removing {mem}')
     mem.delete()
     return redirect('admin')
 def rmDoc(request, ind):
     if not request.session['is_admin']:
+        logger.info('invalid admin entry')
         return HttpResponseNotFound("<h1>Page not found</h1>")
     mem = doc.objects.get(pk=ind)
+    logger.info(f'admin removing {mem}')
     mem.delete()
     return redirect('admin')
   
@@ -107,26 +115,20 @@ def rmDoc(request, ind):
       "message": "Please upload a document.",
       "status": 403,
   },
-  whitelist= [
-    # Text
+  whitelist= 
+  [
+
     'text/plain',
-
-
-    # Office Documents
     'application/msword',  # .doc
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',  # .docx
     'application/vnd.ms-excel',  # .xls
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',  # .xlsx
     'application/vnd.ms-powerpoint',  # .ppt
     'application/vnd.openxmlformats-officedocument.presentationml.presentation',  # .pptx
-
-    # PDF
     'application/pdf',
-
-    # OpenDocument
-    'application/vnd.oasis.opendocument.text',  # .odt
-    'application/vnd.oasis.opendocument.spreadsheet',  # .ods
-    'application/vnd.oasis.opendocument.presentation',  # .odp
+    'application/vnd.oasis.opendocument.text',  
+    'application/vnd.oasis.opendocument.spreadsheet', 
+    'application/vnd.oasis.opendocument.presentation',  
     'application/x-freearc',
     'application/epub+zip'
 ]

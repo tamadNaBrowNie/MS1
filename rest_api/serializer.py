@@ -2,20 +2,6 @@ from rest_framework import serializers
 from MS1_web.models import user,doc
 
 import re
-# pw_v=[
-#             RegexValidator(
-#                 regex=r'^(09|)\d{9}$',
-#                 message="Invalid Number ",
-#                 code="invalid password",
-#             ),
-#         ]
-# ph_v =[
-#             RegexValidator(
-#                 regex=r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$',
-#                 message="Password is 16-255 characters long with atleast one upper case English letter, one lower case English letter, one special character ",
-#                 code="invalid password",
-#             ),
-#         ]
 
 class DocSerializer(serializers.ModelSerializer):
     # owner = serializers.RelatedField(read_only=True,many=False)

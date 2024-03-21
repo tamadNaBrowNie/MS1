@@ -55,6 +55,7 @@ def newPW(req):
         log.info(f'{name} failed password change reason: {str(e)}')
         return Response({'err':str(e),'t':3,'url':'home'},status=400,template_name = 'err.html')
     except DeadSessionException as e:
+        log.info(f'{name} timed out')
         return Response({'err':'dead session','t':3,'url':'entry'},status=400,template_name = 'err.html')
     except Exception as e:
         if DEBUG: raise e
@@ -68,6 +69,7 @@ def LoginUser(request):
     uname = creds['username']
    
     if uname == 'admin' and creds['password'] == "I identify as 1/300 C because i'm a km/s":
+        log.info('admin is entering')
         request.session['is_admin'] = True
         return redirect('admin')
     try:
@@ -83,10 +85,13 @@ def LoginUser(request):
             raise ObjectDoesNotExist
         request.session['data']=data
         request.session['auth']=make_password(uname)
+        log.info(f'{data['name']} is entering')
         return redirect('home',)
     except ObjectDoesNotExist as e: 
+        log.info(f'failed login')
         return Response({'err':'Unmatched user','t':3},status=400,template_name = 'err.html')
     except Exception as e:
+        log.info(f'broken login')
         if not DEBUG:return Response({'err':'Error occured','t':5,'url':''}, status=500,template_name='err.html',)
         raise e
 
@@ -143,4 +148,5 @@ def SeeUser(request):
 def newName(req):
     param = req.data
     rec =user.objects.filter( username=param['username']).update(legal_name = param['legal_name'])
+    log.info(f"admin changed{param['username']}'s legal name to {param['legal_name']}")
     return redirect('admin')
