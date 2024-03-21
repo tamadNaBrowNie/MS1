@@ -28,7 +28,7 @@ class SearchForm(ModelForm):
 class SearchDoc(ModelForm):
     class Meta:
         model = doc
-        fields = ['title','owner']
+        fields = ['title']
 class LoginForm(ModelForm):
     password =CharField(required=True, max_length=255, widget=PasswordInput,label='Password',)
     class Meta:

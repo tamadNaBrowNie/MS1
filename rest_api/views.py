@@ -127,80 +127,25 @@ def newDoc(req):
     param = req.data
     # serial = DocSerializer(data=req.data)
     try:
-        name =req.session['data']['name']
-        sesh =user.objects.get(pk=name)
-        serial = UserSerializer(sesh)
+        # name =req.session['data']['name']
+        # sesh =user.objects.get(pk=name)
+        # serial = UserSerializer(sesh)
         
-        data = {
-            'name':serial.data['username'],
-            'img':serial.data['pfp'],
-            'phone':serial.data['phone'],
-            'email':serial.data['email']
-            }
-        req.session['data'] = data
+        # data = {
+        #     'name':serial.data['username'],
+        #     'img':serial.data['pfp'],
+        #     'phone':serial.data['phone'],
+        #     'email':serial.data['email']
+        #     }
+        # req.session['data'] = data
         # serial.is_valid(raise_exception=True) 
         # serial.save()
-        # rec = doc(owner =sesh,file = f'/{sesh.username}/doc/{param['file']}',title = param['title'])
-        rec = DocSerializer(data=req.data)
-        rec.is_valid(raise_exception = True)
+        rec = doc(file = f'/doc/{param['file']}',title = param['title'])
+        # rec = DocSerializer(data=req.data)
+        # rec.is_valid(raise_exception = True)
         # rec.clean_fields()
         rec.save()
         return redirect('home')
     except Exception as e:
         if DEBUG: raise e
         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
-# @api_view(['POST'])
-# # @renderer_classes([TemplateHTMLRenderer])
-# def newDoc(req):
-#     param = req.data
-#     # serial = DocSerializer(data=req.data)
-#     try:
-#         if req.method != 'POST':
-#             return redirect('home')
-#         name =req.session['data']['name']
-#         rec = doc(owner =sesh,file =req.FILES',title = param['title'])
-#         form =  DocForm(req.POST, req.FILES,)
-#         sesh =user.objects.get(pk=name)
-#         data = {
-#             'name':sesh.username,
-#             'img':sesh.pfp,
-#             'phone':sesh.phone,
-#             'email':sesh.email,
-#             }
-#         req.session['data'] = data
-#         # serial.is_valid(raise_exception=True) 
-#         # serial.save()
-#         # rec = doc(owner =sesh,file = f'/{sesh.username}/doc/{param['file']}',title = param['title'])
-#         # rec.clean_fields()
-#         # rec.save()
-#         return redirect('home')
-#     except Exception as e:
-#         if DEBUG: raise e
-#         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
-#     try:
-        
-#         name = req.session['data']['name']
-#         rec =user.objects.get(pk=name)
-#         form =  ChangePfp(req.POST, req.FILES, instance=rec)
-#         if form.is_valid():
-#             form.save()
-#         # rec.pfp = f'{name}/pfp/{req.FILES['pfp'].name}'
-#         # # rec.pfp = req.data['pfp']
-#         # rec.save()
-    
-#         # form = ChangePfp(req.POST,req.FILES,instance = rec)
-#         # if not form.is_valid():
-#         #     return redirect("/home")
-#         # form.save()
-#         rec =user.objects.get(pk=name)
-#         serial = UserSerializer(rec)
-#         req.session['data'] =  {
-#                 'name':serial.data['username'],
-#                 'img':serial.data['pfp'],
-#                 'phone':serial.data['phone'],
-#                 'email':serial.data['email']
-#                 }
-#         return redirect('home')
-#     except Exception as e:
-#         if DEBUG: raise e
-#         else: return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})
