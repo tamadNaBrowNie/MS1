@@ -7,7 +7,9 @@ def post(instance, filename):return f"doc/{instance.ind}/{instance.title}/{filen
 class doc(models.Model):
     ind =  models.AutoField(primary_key=True)
     title = models.CharField(max_length=255,null = False)
-    file = models.FileField(blank=True, null=True,   upload_to=post, )
+    file = models.FileField(blank=True, null=True,   
+                            # upload_to=post,
+                            )
     # def file(self):return self._file
     class Meta:
         managed = False

@@ -21,7 +21,7 @@ class DocSerializer(serializers.ModelSerializer):
     # owner = serializers.RelatedField(read_only=True,many=False)
     class Meta:
         model = doc
-        fields = ['ind','file','title']
+        fields = ['file','title']
 class UserSerializer(serializers.ModelSerializer):
     def validate_password(self,value):
         regex = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{16,255}$')    # Pattern Modified from https://ihateregex.io/expr/password/

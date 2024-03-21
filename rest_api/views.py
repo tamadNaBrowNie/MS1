@@ -121,31 +121,31 @@ def SeeUser(request):
     except Exception as e:
         if DEBUG: raise e
         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
-@api_view(['POST'])
-# @renderer_classes([TemplateHTMLRenderer])
-def newDoc(req):
-    param = req.data
-    # serial = DocSerializer(data=req.data)
-    try:
-        # name =req.session['data']['name']
-        # sesh =user.objects.get(pk=name)
-        # serial = UserSerializer(sesh)
+# @api_view(['POST'])
+# # @renderer_classes([TemplateHTMLRenderer])
+# def newDoc(req):
+#     param = req.data
+#     # serial = DocSerializer(data=req.data)
+#     try:
+#         # name =req.session['data']['name']
+#         # sesh =user.objects.get(pk=name)
+#         # serial = UserSerializer(sesh)
         
-        # data = {
-        #     'name':serial.data['username'],
-        #     'img':serial.data['pfp'],
-        #     'phone':serial.data['phone'],
-        #     'email':serial.data['email']
-        #     }
-        # req.session['data'] = data
-        # serial.is_valid(raise_exception=True) 
-        # serial.save()
-        rec = doc(file = f'/doc/{param['file']}',title = param['title'])
-        # rec = DocSerializer(data=req.data)
-        # rec.is_valid(raise_exception = True)
-        # rec.clean_fields()
-        rec.save()
-        return redirect('home')
-    except Exception as e:
-        if DEBUG: raise e
-        else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
+#         # data = {
+#         #     'name':serial.data['username'],
+#         #     'img':serial.data['pfp'],
+#         #     'phone':serial.data['phone'],
+#         #     'email':serial.data['email']
+#         #     }
+#         # req.session['data'] = data
+#         # serial.is_valid(raise_exception=True) 
+#         # serial.save()
+#         # rec = doc(file = f'/doc/{param['file']}',title = param['title'])
+#         rec = DocSerializer(data=req.data)
+#         rec.is_valid(raise_exception = True)
+#         # rec.clean_fields()
+#         rec.save()
+#         return redirect('home')
+#     except Exception as e:
+#         if DEBUG: raise e
+#         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)

@@ -77,3 +77,31 @@ def delete(request, username):
 # return render(req,'make.html',{'form':Archive()})
 # def hello(request):
 #     return HttpResponse('Hello')
+def DocX(req):
+   try:
+        if req.method != 'POST':
+            return redirect('home')
+
+        form = DocForm(req.POST, req.FILES)
+        if form.is_valid():
+           post= form.save()
+        # rec.pfp = f'{name}/pfp/{req.FILES['pfp'].name}'
+        # # rec.pfp = req.data['pfp']
+        # rec.save()
+    
+        # form = ChangePfp(req.POST,req.FILES,instance = rec)
+        # if not form.is_valid():
+        #     return redirect("/home")
+        # form.save()
+        # rec =user.objects.get(pk= req.session['data'] ['name'])
+        # serial = UserSerializer(rec)
+        # req.session['data'] =  {
+        #         'name':serial.data['username'],
+        #         'img':serial.data['pfp'],
+        #         'phone':serial.data['phone'],
+        #         'email':serial.data['email']
+        #         }
+        return redirect('home')
+   except Exception as e:
+        if DEBUG: raise e
+        else: return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})
