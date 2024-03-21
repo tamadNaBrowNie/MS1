@@ -8,6 +8,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseNotFound
 from rest_api.serializer import UserSerializer
 from MS1.settings import DEBUG
+from MS1.myerrs import DeadSessionException,timeout
+
+    
 # Create your views here.
 def reg(request):
     return render(request, 'reg.html', {'form':UserForm()})
@@ -15,14 +18,21 @@ def reg(request):
 def login(request): 
     return render(request, 'login.html',{'form': LoginForm()})
 def land(req): return render(req, 'land.html')
-
+logger = logging.getLogger('actions')
 def home(req): 
     try:
+        timeout(req)
+  
+        ldb = logging.getLogger('django.db')
+        ls = logging.getLogger('django.contrib.sessions')
+        
         data = req.session['data']
         logger = logging.getLogger('auth')
+        ldb = logging.getLogger('django.db')
+        ls = logging.getLogger('django.contrib.sessions')
         logger.info(data['name']+' successfully entered')
         return render(req,'home.html',{'form':SearchForm(),**data,'pfp_form':ChangePfp(),'pw_form':ChangePw,'doc_form':DocForm,'finder_form':SearchDoc})
-    except KeyError as e:
+    except DeadSessionException as e:
         # if DEBUG: raise e
         return redirect('entry')
     except Exception as e:
@@ -38,6 +48,7 @@ def newPFP(req):
         form =  ChangePfp(req.POST, req.FILES, instance=rec)
         if form.is_valid():
             form.save()
+            logger.info(f'{name} changed pfp to {req.FILES['pfp'].name}')
         # rec.pfp = f'{name}/pfp/{req.FILES['pfp'].name}'
         # # rec.pfp = req.data['pfp']
         # rec.save()
@@ -92,23 +103,11 @@ def DocX(req):
         form = DocForm(req.POST, req.FILES)
         if form.is_valid():
            post= form.save()
-        # rec.pfp = f'{name}/pfp/{req.FILES['pfp'].name}'
-        # # rec.pfp = req.data['pfp']
-        # rec.save()
-    
-        # form = ChangePfp(req.POST,req.FILES,instance = rec)
-        # if not form.is_valid():
-        #     return redirect("/home")
-        # form.save()
-        # rec =user.objects.get(pk= req.session['data'] ['name'])
-        # serial = UserSerializer(rec)
-        # req.session['data'] =  {
-        #         'name':serial.data['username'],
-        #         'img':serial.data['pfp'],
-        #         'phone':serial.data['phone'],
-        #         'email':serial.data['email']
-        #         }
+
         return redirect('home')
    except Exception as e:
         if DEBUG: raise e
         else: return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})
+def leave(req):
+    req.session.flush()
+    return redirect('landing')

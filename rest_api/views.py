@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import redirect
 from rest_framework.serializers import ValidationError
 from rest_framework.decorators import api_view,renderer_classes
@@ -12,6 +13,7 @@ from rest_framework.parsers import JSONParser
 from django.core.exceptions import ObjectDoesNotExist
 import re
 from MS1.settings import DEBUG
+from MS1.myerrs import DeadSessionException,timeout
 @api_view(['POST'])
 def newName(req):
     try:
@@ -27,10 +29,15 @@ def newName(req):
     except Exception as e:
         if not DEBUG:return Response({'err':'Error occured','t':5,'url':''}, status=500,template_name='err.html',)
         raise e
+log = logging.getLogger('actions')
 @api_view(['POST'])
 def newPW(req):
+
+    name = 'a user'
     try:
+        timeout(req)
         name = req.session['data']['name']
+        
         rec =user.objects.get(pk=name)
         if not check_password(password = req.data['old'],encoded = rec.password):
             raise ValueError('Not Password')
@@ -42,9 +49,13 @@ def newPW(req):
             raise ValueError('Mismatched Passwords')
         rec.password = make_password(req.data['new'])
         rec.save()
+        log.info(f'{name} changed password from{req.data['old']} to {req.data['new']}')
         return redirect('home')
     except (ValueError,ValidationError) as e:
+        log.info(f'{name} failed password change reason: {str(e)}')
         return Response({'err':str(e),'t':3,'url':'home'},status=400,template_name = 'err.html')
+    except DeadSessionException as e:
+        return Response({'err':'dead session','t':3,'url':'entry'},status=400,template_name = 'err.html')
     except Exception as e:
         if DEBUG: raise e
     finally: return Response({'err':'Error occured'+'DNE','t':5,'url':''}, status=500,template_name='err.html',)
@@ -83,22 +94,28 @@ def LoginUser(request):
 @renderer_classes([TemplateHTMLRenderer,BrowsableAPIRenderer])
 def NewUser(request):
     
-    serial = UserSerializer(data=request.data)
+    
     try:
+        if request.data['username'] == 'admin':
+            raise ValidationError
+        serial = UserSerializer(data=request.data)
         serial.is_valid(raise_exception=True)
         # if not valid: raise ValidationError(str(serial.errors))
         if request.data['password'] != request.data['repeat_password']:
-            raise ValueError('Unmatched Passwords')
+            raise ValidationError('Unmatched Passwords')
             # return Response({'err':'foo','bar':'bar'},status=400,template_name = 'err.html')
         post = serial.save()
         post.password =make_password(request.data['password'])
         post.save()
+        log.info(f'welcome {serial.data['username']}')
         return redirect('entry')
-    except (ValueError,ValidationError) as e:
+    except ValidationError as e:
+            log.info('user registration failed')
             # if DEBUG: raise e
-            return Response({'err':str(e),'t':20},status=400,template_name = 'err.html')
+            return Response({'err':e,'t':20},status=400,template_name = 'err.html')
     
     except Exception as e:
+            log.info('registration broke')
             if DEBUG: raise e
             else: return Response({'err':'Error?','t':10,'url':''}, status=500,template_name='err.html',)
 @api_view(['GET'])
@@ -106,6 +123,7 @@ def NewUser(request):
 def SeeUser(request):
     param = request.query_params
     try:
+        log.info(f'{request.session['data']['name']} searched for {param['username']}')
         rec =user.objects.get( pk=param['username'])
         serial = UserSerializer(rec)
         
@@ -121,31 +139,3 @@ def SeeUser(request):
     except Exception as e:
         if DEBUG: raise e
         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
-# @api_view(['POST'])
-# # @renderer_classes([TemplateHTMLRenderer])
-# def newDoc(req):
-#     param = req.data
-#     # serial = DocSerializer(data=req.data)
-#     try:
-#         # name =req.session['data']['name']
-#         # sesh =user.objects.get(pk=name)
-#         # serial = UserSerializer(sesh)
-        
-#         # data = {
-#         #     'name':serial.data['username'],
-#         #     'img':serial.data['pfp'],
-#         #     'phone':serial.data['phone'],
-#         #     'email':serial.data['email']
-#         #     }
-#         # req.session['data'] = data
-#         # serial.is_valid(raise_exception=True) 
-#         # serial.save()
-#         # rec = doc(file = f'/doc/{param['file']}',title = param['title'])
-#         rec = DocSerializer(data=req.data)
-#         rec.is_valid(raise_exception = True)
-#         # rec.clean_fields()
-#         rec.save()
-#         return redirect('home')
-#     except Exception as e:
-#         if DEBUG: raise e
-#         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)

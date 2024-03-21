@@ -161,10 +161,14 @@ LOGGING = {
             'level': 'INFO',
             'handlers': ['file'],
             'propagate':True,
-       }for logger_name in ('django','django.db','django.contrib.sessions','core','rest_framework') 
-        
+       }for logger_name in ('django','django.db','django.contrib.sessions','core','rest_framework','actions','admin') 
+    #    "auth": {
+    #         "level": "INFO",
+    #         "handlers": ["file"],
+    #     },
     }
-}
+    }
+
 logger = logging.getLogger(__name__)
 
 # Internationalization
