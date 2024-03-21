@@ -139,3 +139,8 @@ def SeeUser(request):
     except Exception as e:
         if DEBUG: raise e
         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
+@api_view(['POST'])
+def newName(req):
+    param = req.data
+    rec =user.objects.filter( username=param['username']).update(legal_name = param['legal_name'])
+    return redirect('admin')

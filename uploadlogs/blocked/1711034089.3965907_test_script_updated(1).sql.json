@@ -1,0 +1,58 @@
+{
+    "test_script_updated(1).sql": {
+        "overview": {
+            "name": "test_script_updated(1).sql",
+            "size": 1071,
+            "content_type": "application/octet-stream",
+            "charset": "None",
+            "md5": "90d404b741ac75ffe1eac86c1d765796",
+            "sha1": "5778fd5dcfbf61bf53d45e81333c22496126bfa4",
+            "sha256": "040da4695cee321eb473d48d392d27873419ad1f1a0b5fe3f8b0757f07ca4ddb",
+            "sha512": "67b525d315e06432f3bca879b32a7ebca29ff9f9eb27184a215067727d7e8946e0a1de2906bb3170d6c9d9c959716119bf852e1fab280a224e9ad1cefe7dd915",
+            "block": true,
+            "block_reasons": [
+                "strict_eval_failed"
+            ]
+        },
+        "detection": {
+            "filename_splits": [
+                "test_script_updated(1)",
+                "sql"
+            ],
+            "extensions": [
+                "sql"
+            ],
+            "signature_mime": "text/plain",
+            "guessed_mime": "application/octet-stream",
+            "yara_matches": []
+        },
+        "evaluation": {
+            "mime_manipulation": true,
+            "null_byte_injection": false,
+            "exif_injection": false
+        },
+        "validation_results": {
+            "file_size_ok": true,
+            "matching_extension_signature_request_ok": false,
+            "filename_length_ok": true,
+            "extensions_whitelist_ok": false,
+            "request_whitelist_ok": false,
+            "signature_whitelist_ok": true,
+            "yara_rules_ok": true,
+            "file_integrity_ok": false,
+            "file_integrity_check_done": false,
+            "malicious": true,
+            "total_points_overall": 2,
+            "guessing_scores": {
+                "text/plain": 1,
+                "None": 1
+            }
+        },
+        "sanitization_results": {
+            "cleansed_exif": false,
+            "cleansed_structure": false,
+            "created_random_filename_with_guessed_extension": false,
+            "disarmed_pdf": false
+        }
+    }
+}

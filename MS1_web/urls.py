@@ -28,5 +28,5 @@ urlpatterns = [
     path('admin/delete/user/<str:username>',rmUser,name ='rmU'),
     path('admin/delete/doc/<int:ind>',rmDoc,name ='rmD'),
     path('home/doc/',DocX), path('admin/leave',leave), path('home/leave',leave),
-
+    
 ]

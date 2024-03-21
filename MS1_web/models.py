@@ -2,7 +2,7 @@
 from django.db import models
 # from django.contrib.auth.models import AbstractBaseUser
 from django.core.validators import RegexValidator
-from file_validator.models import DjangoFileValidator
+# from file_validator.models import DjangoFileValidator
 def post(instance, filename):return f"doc/{instance.ind}/{instance.title}/{filename}"
 class doc(models.Model):
     ind =  models.AutoField(primary_key=True)

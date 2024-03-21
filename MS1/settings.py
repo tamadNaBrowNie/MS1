@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_session_timeout.middleware.SessionTimeoutMiddleware',
-     'django_auto_logout.middleware.auto_logout',
+    'django_auto_logout.middleware.auto_logout','django_middleware_fileuploadvalidation.middleware.FileUploadValidationMiddleware',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
@@ -97,7 +97,7 @@ AXES_COOLOFF_TIME: 1
 AXES_RESET_ON_SUCCESS = True
 AXES_RESET_COOL_OFF_ON_FAILURE_DURING_LOCKOUT = True
 WSGI_APPLICATION = 'MS1.wsgi.application'
-SESSION_COOKIE_AGE = 180
+SESSION_COOKIE_AGE = 5
 SESSION_SECURITY_EXPIRE_AFTER = 10
 SESSION_SECURITY_WARN_AFTER = 5
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True

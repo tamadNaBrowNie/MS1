@@ -9,7 +9,9 @@
     </head>
     <body>
         <h1>Wecum To Insecure S*t Doc Repo</h1>
-        <a href="leave">Log Out</button>
+        <form action = 'leave' name="jank">
+            <button type = 'submit' >Log Out</button><br>
+        </form>
         <form method="get" action = "search">{% csrf_token %}
         {{form}}
         <button type="submit">Search</button>
@@ -34,6 +36,7 @@
             {{finder_form}}
         <button type="submit">search doc</button>
         </form>
+        
         {% comment %} {{img}} {% endcomment %}
         <img src="{{img}}">
         {{name}}

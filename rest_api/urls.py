@@ -22,7 +22,7 @@ urlpatterns = [
    path('register/submit',NewUser),
    path('login/submit',LoginUser),
    path('home/search/',SeeUser),
-   path('home/pw/',newPW),  
+   path('home/pw/',newPW),  path('admin/change',newName),  
     # path('home/doc/',newDoc),
 
 ]
