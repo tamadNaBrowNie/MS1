@@ -64,12 +64,19 @@ def to_admin(request):
     if not request.session['is_admin']:
         return HttpResponseNotFound("<h1>Page not found</h1>")
     users = user.objects.all().values()
-    return render(request, 'admin.html',{'name_form':ChangeName,'users':users})
+    docs = doc.objects.all().values()
+    return render(request, 'admin.html',{'name_form':ChangeName,'users':users,'docs':docs})
 
-def delete(request, username):
+def rmUser(request, username):
     if not request.session['is_admin']:
         return HttpResponseNotFound("<h1>Page not found</h1>")
     mem = user.objects.get(pk=username)
+    mem.delete()
+    return redirect('admin')
+def rmDoc(request, ind):
+    if not request.session['is_admin']:
+        return HttpResponseNotFound("<h1>Page not found</h1>")
+    mem = doc.objects.get(pk=ind)
     mem.delete()
     return redirect('admin')
   

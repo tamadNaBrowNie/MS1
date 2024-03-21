@@ -7,7 +7,18 @@
           <tr>
           <td>{{ x.username }}</td>
           <td>{{ x.legal_name }}</td>
-          <td><a href="delete/{{ x.username }}">delete</a></td>
+          <td><a href="delete/user/{{ x.username }}">delete</a></td>
+          <!-- YES I KNOW IT IS INSECEURE AND LAZY I AM OUT OF TIME -->
+          </tr>
+        {% endfor %}
+      </table>
+      <table>
+        {% for x in docs %}
+          <tr>
+          <td>{{ x.ind }}</td>
+          <td>{{ x.title }}</td>
+          <td>{{ x.file }}</td>
+          <td><a href="delete/doc/{{ x.ind }}">delete</a></td>
           <!-- YES I KNOW IT IS INSECEURE AND LAZY I AM OUT OF TIME -->
           </tr>
         {% endfor %}

@@ -37,7 +37,7 @@ class LoginForm(ModelForm):
 def pfp(instance, filename): return f"{instance.username}/pfp/{filename}"    
 class DocForm(ModelForm):
     title =CharField(max_length=255,required=True)
-    file = FileField(required=True,allow_empty_file=True  )
+    file = FileField(required=True,allow_empty_file=True,  )
     class Meta:
         model = doc
         fields =['title','file']
