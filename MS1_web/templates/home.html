@@ -9,14 +9,15 @@
     </head>
     <body>
         <h1>Wecum To Insecure S*t Doc Repo</h1>
-        <form action = 'leave' name="jank">
+        <a href="leave">logout</a>
+        <!-- <form action = 'leave' name="jank">
             <button type = 'submit' >Log Out</button><br>
-        </form>
+        </form> -->
         <form method="get" action = "search">{% csrf_token %}
         {{form}}
         <button type="submit">Search</button>
         </form>       
-        <form method="POST" action = "pfp/" enctype="multipart/form-data">{% csrf_token %}
+        <form method="post" action = "pfp/" enctype="multipart/form-data">{% csrf_token %}
             <label>Change Profile Picture </label>
             {{pfp_form}}
         <button type="submit">Change Profile Picture </button>

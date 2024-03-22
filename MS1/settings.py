@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import logging
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -55,11 +56,14 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_session_timeout.middleware.SessionTimeoutMiddleware',
-    'django_auto_logout.middleware.auto_logout','django_middleware_fileuploadvalidation.middleware.FileUploadValidationMiddleware',
+    # 'django_session_timeout.middleware.SessionTimeoutMiddleware',
+    # 'django_auto_logout.middleware.auto_logout',
+    'django_middleware_fileuploadvalidation.middleware.FileUploadValidationMiddleware',
+    
 ]
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
@@ -90,21 +94,21 @@ TEMPLATES = [
     },
 ]
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR/MEDIA_URL
 TIMEOUT = 10
 AXES_FAILURE_LIMIT: 6
 AXES_COOLOFF_TIME: 1
 AXES_RESET_ON_SUCCESS = True
 AXES_RESET_COOL_OFF_ON_FAILURE_DURING_LOCKOUT = True
 WSGI_APPLICATION = 'MS1.wsgi.application'
-SESSION_COOKIE_AGE = 5
+SESSION_COOKIE_AGE = 120
 SESSION_SECURITY_EXPIRE_AFTER = 10
 SESSION_SECURITY_WARN_AFTER = 5
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 SESSION_TIMEOUT_REDIRECT = 'entry'
 SESSION_SAVE_EVERY_REQUEST = True
-
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 DATABASES = {
      'default': {
@@ -134,7 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 FILE_UPLOAD_HANDLERS = [
-    # 'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
 ]
 LOGGING = {
     'version': 1,

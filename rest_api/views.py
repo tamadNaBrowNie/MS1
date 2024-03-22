@@ -14,6 +14,10 @@ from django.core.exceptions import ObjectDoesNotExist
 import re
 from MS1.settings import DEBUG
 from MS1.myerrs import DeadSessionException,timeout
+from django.http import HttpResponseForbidden
+
+from django_middleware_fileuploadvalidation.decorators import file_upload_config
+
 @api_view(['POST'])
 def newName(req):
     try:
@@ -49,7 +53,7 @@ def newPW(req):
             raise ValueError('Mismatched Passwords')
         rec.password = make_password(req.data['new'])
         rec.save()
-        log.info(f'{name} changed password from{req.data['old']} to {req.data['new']}')
+        log.info(f'{name} changed password from{req.data["old"]} to {req.data["new"]}')
         return redirect('home')
     except (ValueError,ValidationError) as e:
         log.info(f'{name} failed password change reason: {str(e)}')
@@ -59,7 +63,7 @@ def newPW(req):
         return Response({'err':'dead session','t':3,'url':'entry'},status=400,template_name = 'err.html')
     except Exception as e:
         if DEBUG: raise e
-    finally: return Response({'err':'Error occured'+'DNE','t':5,'url':''}, status=500,template_name='err.html',)
+        else: return Response({'err':'Error occured'+'DNE','t':5,'url':''}, status=500,template_name='err.html',)
 
 @api_view(['POST'])
 @renderer_classes([TemplateHTMLRenderer,])
@@ -85,7 +89,7 @@ def LoginUser(request):
             raise ObjectDoesNotExist
         request.session['data']=data
         request.session['auth']=make_password(uname)
-        log.info(f'{data['name']} is entering')
+        log.info(f'{data["name"]} is entering')
         return redirect('home',)
     except ObjectDoesNotExist as e: 
         log.info(f'failed login')
@@ -95,6 +99,24 @@ def LoginUser(request):
         if not DEBUG:return Response({'err':'Error occured','t':5,'url':''}, status=500,template_name='err.html',)
         raise e
 
+# @api_view(['POST'])
+@file_upload_config(
+  file_size_limit=2000000,
+  keep_original_filename=True,
+  response_config={
+      "error_func": HttpResponseForbidden,
+      "message": "Please upload a document.",
+      "status": 403,
+  },
+  whitelist= [
+    "image/jpeg",   # JPEG
+    "image/png",    # PNG
+    "image/gif",    # GIF
+    "image/bmp",    # BMP
+    "image/webp"    # WebP
+]
+
+)
 @api_view(['POST'])
 @renderer_classes([TemplateHTMLRenderer,BrowsableAPIRenderer])
 def NewUser(request):
@@ -105,14 +127,12 @@ def NewUser(request):
             raise ValidationError
         serial = UserSerializer(data=request.data)
         serial.is_valid(raise_exception=True)
-        # if not valid: raise ValidationError(str(serial.errors))
         if request.data['password'] != request.data['repeat_password']:
             raise ValidationError('Unmatched Passwords')
-            # return Response({'err':'foo','bar':'bar'},status=400,template_name = 'err.html')
         post = serial.save()
-        post.password =make_password(request.data['password'])
+        post.password =make_password(request.data["password"])
         post.save()
-        log.info(f'welcome {serial.data['username']}')
+        log.info(f'welcome {serial.data["username"]}')
         return redirect('entry')
     except ValidationError as e:
             log.info('user registration failed')
@@ -128,7 +148,7 @@ def NewUser(request):
 def SeeUser(request):
     param = request.query_params
     try:
-        log.info(f'{request.session['data']['name']} searched for {param['username']}')
+        log.info(f'{request.session["data"]["name"]} searched for {param["username"]}')
         rec =user.objects.get( pk=param['username'])
         serial = UserSerializer(rec)
         
@@ -147,6 +167,35 @@ def SeeUser(request):
 @api_view(['POST'])
 def newName(req):
     param = req.data
-    rec =user.objects.filter( username=param['username']).update(legal_name = param['legal_name'])
+    rec =user.objects.get( username=param['username'])
+    rec.legal_name = param['legal_name'] 
+    rec.save()
     log.info(f"admin changed{param['username']}'s legal name to {param['legal_name']}")
     return redirect('admin')
+@api_view(['POST'])
+@renderer_classes([TemplateHTMLRenderer])
+def findDoc(req):
+    param = req.data
+    rec =doc.objects.filter( title=param['title']).all()
+    # log.info(f"admin changed{param['username']}'s legal name to {param['legal_name']}")
+    return Response({'lst':rec,'t':100,'url':'home'},status=400,template_name = 'docs.html')
+# @api_view(['POST'])
+# def DocX(req):
+#    try:
+#         if 'data' not in req.session:
+#            raise TimeoutError
+#         name = req.session['data']['name']
+#         serial = DocSerializer(data=req.data)
+#         serial.is_valid(raise_exception=True)
+#         serial.save()
+#         log.info(f'{name} tries adding {req.raw_post_data}')
+#         # form = DocForm(req.POST, req.FILES)
+#         # if form.is_valid():
+#         #     log.info(f'{name} added {req.FILES} to docs')
+#         #     post= form.save()
+
+#         return redirect('home')
+#    except Exception as e:
+#         if DEBUG: raise e
+#         else: return Response({'err':'Error?','t':5,'url':''}, status=500,template_name='err.html',)
+#         # else: return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})

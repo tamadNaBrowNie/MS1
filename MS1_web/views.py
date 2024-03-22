@@ -40,20 +40,64 @@ def home(req):
         return redirect('entry')
     except Exception as e:
         if DEBUG: raise e
-    return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})
-    
+        else: return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})
+
+# @file_upload_config(
+#   file_size_limit=2000000,
+#   keep_original_filename=True,
+#   response_config={
+#       "error_func": HttpResponseForbidden,
+#       "message": "Please upload a document.",
+#       "status": 403,
+#   },
+#   whitelist= [
+#     "image/jpeg",   # JPEG
+#     "image/png",    # PNG
+#     "image/gif",    # GIF
+#     "image/bmp",    # BMP
+#     # "image/webp"    # WebP
+# ]
+
+# )
+@file_upload_config(
+  file_size_limit=2000000,
+  keep_original_filename=True,
+  response_config={
+      "error_func": HttpResponseForbidden,
+      "message": "Please upload a document.",
+      "status": 403,
+  },
+  whitelist= [
+    "image/jpeg",   # JPEG
+    "image/png",    # PNG
+    "image/gif",    # GIF
+    "image/bmp",    # BMP
+    "image/webp"    # WebP
+]
+
+)
+
 def newPFP(req):
    try:
         if req.method != 'POST':
             return redirect('home')
         name = req.session['data']['name']
         rec =user.objects.get(pk=name)
-        form =  ChangePfp(req.POST, req.FILES, instance=rec)
-        logger.info(f'{name} changing pfp to {req.FILES['pfp'].name}')
-        if form.is_valid():
-            form.save()
-            logger.info(f'{name} changed pfp to {req.FILES['pfp'].name}')
+        # form =  ChangePfp(req.POST, req.FILES, instance=rec)
+        # fname = req.FILES
+        # logger.info(f'{name} changed pfp')
+        
+        logger.info(f'{name} tries adding {req.FILES}')
+        # logger.info(f'{name} changed{form.is_valid()}')
         rec =user.objects.get(pk=name)
+        file = req.FILES.get('pfp')
+        rec.pfp = file
+        rec.save()
+        # print(form.is_valid())
+        # if form.is_valid():
+        #     form.save()
+        #     logger.info(f'{name} changed{req.FILES["pfp"]}')
+        
         serial = UserSerializer(rec)
         req.session['data'] =  {
                 'name':serial.data['username'],
@@ -63,7 +107,10 @@ def newPFP(req):
                 }
         return redirect('home')
    except Exception as e:
-        if DEBUG: raise e
+        if DEBUG:
+            raise e
+            # return render(req, 'err.html',{'err':req.FILES,'t':50,'url':''})
+
         else: return render(req, 'err.html',{'err':'An error happened','t':50,'url':''})
 
 
@@ -129,7 +176,7 @@ def DocX(req):
         name = req.session['data']['name']
         if req.method != 'POST':
             return redirect('home')
-        logger.info(f'{name} tries adding {req.FILES}')
+        logger.info(f'{name} tries adding')
         form = DocForm(req.POST, req.FILES)
         if form.is_valid():
             logger.info(f'{name} added {req.FILES} to docs')

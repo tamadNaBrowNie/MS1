@@ -1,0 +1,11 @@
+<table>
+    Docs
+      {% for x in lst %}
+        <tr>
+        <td>{{ x.title }}</td>
+        <td>{{ x.file }}</td>
+        <!-- <td><a href="delete/user/{{ x.username }}">delete</a></td> -->
+        <!-- YES I KNOW IT IS INSECEURE AND LAZY I AM OUT OF TIME -->
+        </tr>
+      {% endfor %}
+    </table><br>

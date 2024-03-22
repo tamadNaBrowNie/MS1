@@ -12,3 +12,370 @@ Not Found: /media/fdsa/pfp/2sql.png
 Not Found: /favicon.ico
 Not Found: /admin/leave
 Not Found: /favicon.ico
+failed login
+Bad Request: /login/submit
+welcome asdf0
+user registration failed
+Bad Request: /register/submit
+user registration failed
+Bad Request: /register/submit
+welcome asdf0
+asdf0 is entering
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {}>
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {}>
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {}>
+Not Found: /home/None
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {}>
+Not Found: /home/None
+asdf0 changed pfp
+Not Found: /home/None
+asdf0 changed pfp
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+asdf0 failed password change reason: Not Password
+Internal Server Error: /home/pw/
+asdf0 is entering
+Not Found: /home/None
+asdf0 changed password fromasdfASDF@12341234 to fdsaASDF@12341234
+Internal Server Error: /home/pw/
+failed login
+Bad Request: /login/submit
+failed login
+Bad Request: /login/submit
+failed login
+Bad Request: /login/submit
+asdf0 is entering
+Not Found: /home/None
+asdf0 changed password fromfdsaASDF@12341234 to asdfASDF@12341234
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 changedTrue
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 changedTrue
+asdf0 changedFalse
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+user registration failed
+Bad Request: /register/submit
+welcome fdsa
+fdsa is entering
+Not Found: /home/None
+fdsa changedFalse
+Not Found: /home/None
+fdsa changedFalse
+Not Found: /home/None
+fdsa changedFalse
+Not Found: /home/None
+fdsa changedFalse
+Not Found: /home/None
+admin is entering
+valid admin entry
+admin removing user object (fdsa)
+valid admin entry
+admin changedadsf0's legal name to aberin
+valid admin entry
+valid admin entry
+valid admin entry
+valid admin entry
+valid admin entry
+valid admin entry
+valid admin entry
+admin is entering
+valid admin entry
+valid admin entry
+valid admin entry
+admin changedasdf0's legal name to aberin
+valid admin entry
+valid admin entry
+admin changedasdf0's legal name to aberin
+valid admin entry
+admin changedasdf0's legal name to aberin
+valid admin entry
+admin changedasdf0's legal name to aberin
+admin is entering
+valid admin entry
+admin changedasdf0's legal name to aberin
+valid admin entry
+admin changedasdf0's legal name to shawn
+valid admin entry
+asdf0 is entering
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {}>
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {}>
+Not Found: /home/None
+user registration failed
+Bad Request: /register/submit
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+Not Found: /home/doc/search
+failed login
+Bad Request: /login/submit
+user registration failed
+Bad Request: /register/submit
+user registration failed
+Bad Request: /register/submit
+user registration failed
+Bad Request: /register/submit
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+Not Found: /home/None
+Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Bad Request: /home/
+Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Bad Request: /login/
+Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Bad Request: /login/
+Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Bad Request: /home/
+Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Bad Request: /home/
+Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to ALLOWED_HOSTS.
+Bad Request: /
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+user registration failed
+Bad Request: /register/submit
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+asdf0 is entering
+Not Found: /home/None
+asdf0 changedFalse
+Not Found: /home/None
+Not Found: /home/None
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {}>
+asdf0 changedFalse
+Not Found: /home/None
+Internal Server Error: /home/pfp/
+Traceback (most recent call last):
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = middleware_method(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django_middleware_fileuploadvalidation\middleware.py", line 66, in process_view
+    request, files = handler.monitor_request()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\.virtualenvs\MS1-KLv6dX9x\Lib\site-packages\django_middleware_fileuploadvalidation\FileUploadHandler.py", line 51, in monitor_request
+    assert self.request is not None, "Request is not set in FileUploadHandler"
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Request is not set in FileUploadHandler
+asdf0 is entering
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: Relationship of Urban population proportion to Net enrolment rate  (2).png (image/png)>]}>
+asdf0 changedTrue
+Not Found: /media/Relationship of Urban population proportion to Net enrolment rate  (2).png
+Not Found: /media/Relationship of Urban population proportion to Net enrolment rate  (2).png
+Not Found: /media/Relationship of Urban population proportion to Net enrolment rate  (2).png
+asdf0 is entering
+Not Found: /home/None
+Not Found: /home/None
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: Relationship of Urban population proportion to Net enrolment rate  (2).png (image/png)>]}>
+Not Found: /media/Relationship of Urban population proportion to Net enrolment rate  (2).png
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: pubchart.png (image/png)>]}>
+Not Found: /media/pubchart.png
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: pubchart.png (image/png)>]}>
+Not Found: /media/pubchart.png
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: pubchart.png (image/png)>]}>
+Not Found: /media/pubchart.png
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: pubchart.png (image/png)>]}>
+Not Found: /media/pubchart.png
+Forbidden: /home/doc/
+Not Found: /media/pubchart.png
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: AberiSSS3.jpg (image/jpeg)>]}>
+Not Found: /media/AberiSSS3.jpg
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: AberiSSS3.jpg (image/jpeg)>]}>
+asdf0 is entering
+asdf0 tries adding <MultiValueDict: {'pfp': [<TemporaryUploadedFile: AberiSSS3.jpg (image/jpeg)>]}>
+user registration failed
+Bad Request: /register/submit
+failed login
+Bad Request: /login/submit
+asdf0 is entering
+Not Found: /home/doc/
+asdf0 tries adding
+asdf0 added <MultiValueDict: {'file': [<TemporaryUploadedFile: smart_tel.txt (text/plain)>]}> to docs
+Not Found: /home/doc/search
+failed login
+Bad Request: /login/submit
+user registration failed
+Bad Request: /register/submit
+welcome fdsaa
+fdsaa is entering
+Forbidden: /home/doc/
+asdf0 is entering
+Bad Request: /home/doc/search

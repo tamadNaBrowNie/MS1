@@ -1,0 +1,59 @@
+{
+    "inspi_1114H_1.17.23.jpg": {
+        "overview": {
+            "name": "inspi_1114H_1.17.23.jpg",
+            "size": 43401,
+            "content_type": "image/jpeg",
+            "charset": "None",
+            "md5": "99b4951e9d557055798d4268d2c25b83",
+            "sha1": "923ddef54c85f2a06552e101898bb33e71e58238",
+            "sha256": "20a72e7ee7a817b8ed502eea2e3e4620cbdf89760b3810430b97b0af759fccf8",
+            "sha512": "2c556382eba2827cbe213859e9866546cd74d73971d08ee6ee91d3f3bdf7ea576c280232c8909e6ba9c82d8b7da692b8cd9c2c67fd2be626da5c387720506ff3",
+            "block": true,
+            "block_reasons": [
+                "strict_eval_failed"
+            ]
+        },
+        "detection": {
+            "filename_splits": [
+                "inspi_1114h_1",
+                "17",
+                "23",
+                "jpg"
+            ],
+            "extensions": [
+                "jpg"
+            ],
+            "signature_mime": "image/jpeg",
+            "guessed_mime": "image/jpeg",
+            "yara_matches": []
+        },
+        "evaluation": {
+            "mime_manipulation": false,
+            "null_byte_injection": false,
+            "exif_injection": false
+        },
+        "validation_results": {
+            "file_size_ok": true,
+            "matching_extension_signature_request_ok": true,
+            "filename_length_ok": true,
+            "extensions_whitelist_ok": false,
+            "request_whitelist_ok": false,
+            "signature_whitelist_ok": false,
+            "yara_rules_ok": true,
+            "file_integrity_ok": true,
+            "file_integrity_check_done": true,
+            "malicious": true,
+            "total_points_overall": 2,
+            "guessing_scores": {
+                "image/jpeg": 2
+            }
+        },
+        "sanitization_results": {
+            "cleansed_exif": false,
+            "cleansed_structure": false,
+            "created_random_filename_with_guessed_extension": false,
+            "disarmed_pdf": false
+        }
+    }
+}
