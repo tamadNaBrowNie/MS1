@@ -379,3 +379,24 @@ fdsaa is entering
 Forbidden: /home/doc/
 asdf0 is entering
 Bad Request: /home/doc/search
+Bad Request: /home/doc/search
+Bad Request: /home/doc/search
+Forbidden: /register/submit
+welcome asdf0
+asdf0 is entering
+asdf0 is entering
+asdf0 is entering
+asdf0 tries adding
+asdf0 added <MultiValueDict: {'file': [<TemporaryUploadedFile: Juice Shop.pdf (application/pdf)>]}> to docs
+asdf0 tries adding
+asdf0 added <MultiValueDict: {'file': [<TemporaryUploadedFile: STALGCM_ProblemSet1_AY2223T3_v2.pdf (application/pdf)>]}> to docs
+admin is entering
+valid admin entry
+asdf0 is entering
+asdf0 is entering
+asdf0 is entering
+asdf0 is entering
+asdf0 is entering
+asdf0 searched for asdf0
+asdf0 is entering
+Bad Request: /home/doc/search

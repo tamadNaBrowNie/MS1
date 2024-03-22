@@ -172,11 +172,11 @@ def newName(req):
     rec.save()
     log.info(f"admin changed{param['username']}'s legal name to {param['legal_name']}")
     return redirect('admin')
-@api_view(['POST'])
+@api_view(['GET'])
 @renderer_classes([TemplateHTMLRenderer])
 def findDoc(req):
-    param = req.data
-    rec =doc.objects.filter( title=param['title']).all()
+    param = req.query_params
+    rec =doc.objects.filter( title=param['title'])
     # log.info(f"admin changed{param['username']}'s legal name to {param['legal_name']}")
     return Response({'lst':rec,'t':100,'url':'home'},status=400,template_name = 'docs.html')
 # @api_view(['POST'])

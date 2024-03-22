@@ -32,7 +32,7 @@
             {{doc_form}}
         <button type="submit">upload doc</button>
         </form>
-        <form method="POST" action = "doc/search">{% csrf_token %}
+        <form method="GET" action = "doc/search">{% csrf_token %}
             <label>Find Doc </label>
             {{finder_form}}
         <button type="submit">search doc</button>
